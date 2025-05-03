@@ -8,6 +8,15 @@
             "Password": "123456",
             "Phone": "01020896307",
             "admin": "true"
+        },
+        {
+            "User id ": "12",
+            "name": "hager",
+            "Email": "ha1316625@gmail",
+            "Username": "hager",
+            "Password": "12385",
+            "Phone": "01097077483",
+            "admin": "true"
         }
     ]
 }
