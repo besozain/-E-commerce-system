@@ -1,0 +1,98 @@
+let name =document.getElementById("name")
+let errorname=document.getElementById("errorname")
+
+let email =document.getElementById("email")
+let erroremail=document.getElementById("erroremail")
+
+let username =document.getElementById("username")
+let errorusername=document.getElementById("errorusername")
+
+let password =document.getElementById("password")
+let errorpassword=document.getElementById("errorpassword")
+
+let confirmpass =document.getElementById("confirm")
+let errorconfirm=document.getElementById("errorconfirm")
+
+let phone =document.getElementById("phone")
+let errorphone=document.getElementById("errorphone")
+
+let submit =document.getElementById("submit")
+
+
+
+
+name.addEventListener("blur",function(){
+    const pattern = /^[A-Za-z\s]{3,}$/;
+    validateInput(this,errorname,pattern);
+});
+
+
+
+
+email.addEventListener("blur",function(){
+    const pattern =  /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    validateInput(this,erroremail,pattern);
+});
+
+
+
+username.addEventListener("blur",function(){
+    const pattern =  /^[A-Za-z\s]{3,}$/;
+    validateInput(this,errorusername,pattern);
+});
+
+
+
+password.addEventListener("blur",function(){
+    const pattern = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+    validateInput(this,errorpassword,pattern);
+});
+
+confirmpass.addEventListener("blur", function () {
+    if(password.value=="" || password.value !=confirmpass.value ){
+        this.style.border = "3px solid red";
+        this.value = "";
+        errorconfirm.style.visibility = "visible";
+        // this.focus();
+    }else{
+        this.style.border = "3px solid green";
+        errorconfirm.style.visibility = "hidden";
+    }
+  
+});
+
+phone.addEventListener("blur",function(){
+    const pattern = /^(?:\+20|0)(10|11|12|15)[0-9]{8}$/;
+    validateInput(this,errorphone,pattern);
+});
+
+
+
+
+
+submit.addEventListener("click", function () {
+    event.preventDefault(); 
+
+    let allValid = true;
+
+  
+
+    checkField(name, errorname, /^[A-Za-z\s]{3,}$/);
+    checkField(email, erroremail, /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/);
+    checkField(username, errorusername, /^[A-Za-z\s]{3,}$/);
+    checkField(password, errorpassword, /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/);
+    checkField(phone, errorphone, /^(?:\+20|0)(10|11|12|15)[0-9]{8}$/);
+
+    if (password.value === "" || password.value !== confirmpass.value.trim()) {
+        confirmpass.style.border = "3px solid red";
+        errorconfirm.style.visibility = "visible";
+        allValid = false;
+    } else {
+        confirmpass.style.border = "3px solid green";
+        errorconfirm.style.visibility = "hidden";
+    }
+
+    if (allValid) {
+        alert("ok" );
+    }
+});

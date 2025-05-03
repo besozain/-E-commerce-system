@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/register.css">
+</head>
+<body>
+    <form action="">
+        <label for="name"> name </label>
+        <br>
+        <input  type="text" name="name" id="name" class="register" placeholder="Enter the name">
+        <div id="errorname"> you should name increase three</div>
+
+        <label for="email"> email </label>
+        <br>
+        <input type="email" name="email" id="email" class="register" placeholder="Enter the email">
+        <div id="erroremail">invalid email</div>
+
+        <label for="username"> username </label>
+        <br>
+        <input type="text" name="username" id="username" class="register" placeholder="Enter the username">
+        <div id="errorusername">you should user name increase three</div>
+
+        <label for="password"> password </label>
+        <br>
+        <input type="password" name="password" id="password" class="register" placeholder="Enter the password">
+        <div id="errorpassword">invalid password</div>
+
+        <label for="confirm"> confirm </label>
+        <br>
+        <input type="password" name="confirm" id="confirm" class="register" placeholder="Enter the confirm">
+        <div id="errorconfirm">error</div>
+
+        <label for="phone"> phone </label>
+        <br>
+        <input type="tel" name="phone" id="phone" class="register" placeholder="Enter the phone">
+        <div id="errorphone">invalid phone</div>
+
+        <button type="submit" id="submit">register</button>
+    </form>
+    <script src="../js/regester.js"></script>
+    <script src="../js/validation.js"></script>
+</body>
+</html>
