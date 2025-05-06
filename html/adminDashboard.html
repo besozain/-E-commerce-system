@@ -1,11 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="../css/adminDashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
-    
+    <div class="dashboard">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h1>Admin</h1>
+            <nav>
+                <a href="./adminDashboard.html">Products</a>
+                <a href="./adminusers.html">Users</a>
+                <a href="./adminorder.html">Orders</a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="header">
+                <h2>Dashboard</h2>
+                <div class="admin-info">
+                    <span>Admin</span>
+                    <img src="../assets/images/admin.jpg" alt="Admin avatar">
+                </div>
+            </header>
+
+            <!-- Stats -->
+            <section class="stats">
+                <div class="stat-card">
+                    <h3>Products</h3>
+                    <p></p>
+                </div>
+                <div class="stat-card">
+                    <h3>Users</h3>
+                    <p></p>
+                </div>
+                <div class="stat-card">
+                    <h3>Orders</h3>
+                    <p></p>
+                </div>
+            </section>
+
+            <!-- Products Section -->
+            <section id="products" class="section">
+                <div class="section-header">
+                    <h3>Products</h3>
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search products...">
+                        <button><i class="fas fa-search"></i> Search</button>
+                    </div>
+                    <button>Add Product</button>
+                </div>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Price</th>
+                                <th>Stock</th>
+                                <th>Category</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+            </section>
+
+        </main>
+    </div>
 </body>
+
 </html>

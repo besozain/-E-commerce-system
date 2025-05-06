@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>users</title>
+  <link rel="stylesheet" href="../css/adminDashboard.css">
+</head>
+
+<body>
+  <div class="dashboard">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h1>Admin</h1>
+      <nav>
+        <a href="./adminDashboard.html">Products</a>
+        <a href="./adminusers.html">Users</a>
+        <a href="./adminorder.html">Orders</a>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <header class="header">
+        <h2>Dashboard</h2>
+        <div class="admin-info">
+          <span>Admin</span>
+          <img src="../assets/images/admin.jpg" alt="Admin avatar">
+        </div>
+      </header>
+
+      <!-- Stats -->
+      <section class="stats">
+        <div class="stat-card">
+          <h3>Products</h3>
+          <p></p>
+        </div>
+        <div class="stat-card">
+          <h3>Users</h3>
+          <p></p>
+        </div>
+        <div class="stat-card">
+          <h3>Orders</h3>
+          <p></p>
+        </div>
+      </section>
+
+      <!-- Users Section -->
+      <section id="users" class="section">
+        <div class="section-header">
+          <h3>Products</h3>
+          <div class="search-bar">
+              <input type="text" placeholder="Search Users...">
+              <button><i class="fas fa-search"></i> Search</button>
+          </div>
+          <button>Add user</button>
+      </div>
+              
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Role</th>
+              </tr>
+            </thead>
+
+          </table>
+        </div>
+      </section>
+
+    </main>
+  </div>
+</body>
+
+</html>
