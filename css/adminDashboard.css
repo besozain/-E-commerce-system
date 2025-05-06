@@ -105,7 +105,7 @@ body {
 }
 
 .section-header button {
-    background-color: #9DDCD3;
+    background-color: #007664;
     color: white;
     border: none;
     padding: 8px 12px;
@@ -136,12 +136,12 @@ body {
 }
 
 .search-bar input:focus {
-    border-color: #3b82f6;
-    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+    border-color: #005d208a;
+    box-shadow: 0 0 0 2px rgba(59, 246, 184, 0.2);
 }
 
 .search-bar button {
-    background-color: #3b82f6;
+    background-color: #007664;
     border: none;
     padding: 10px 20px;
     border-radius: 8px;
@@ -152,7 +152,7 @@ body {
 }
 
 .search-bar button:hover {
-    background-color: #2563eb;
+    background-color: #006354;
 }
 
 .table-container {
