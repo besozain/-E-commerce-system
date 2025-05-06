@@ -2,9 +2,80 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: sans-serif;
+    transform: 2s ease;
+}
+body {
+    display: grid;
+    height: 100vh;
+    place-items: center;
+      
+}
+main {
+    text-align: center;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 80%;
+    max-width: 720px; 
+    box-shadow: 1px 2px 10px  rgba(0, 0, 0, 0.162) ;
+}
+.register h1 {
+    margin: 50px 0 20px;
 }
 
+.register input, #submit {
+    padding: 8px 10px;
+    margin:  8px 0;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    width: 80%;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.227);
+}
+
+.register #submit {
+    width: fit-content;
+    width: 40%;
+    color: white;
+    background-color: rgba(2, 165, 141, 0.39) ;
+}
+
+.register #submit:hover,.welcome .sign-in:hover {
+    color: rgba(2, 165, 141, 0.39)  ;
+    background-color:white;
+    font-weight: bold;
+    cursor: pointer;
+}
 div{
     color: red;
     visibility: hidden;
 }
+
+.welcome {
+    color: white;
+    padding: 130px 20px;
+    border-radius: 20px 100px 100px 20px;
+    background-color: rgba(2, 165, 141, 0.39);
+}
+.welcome h1 {
+    margin: 120px 0 20px;
+}
+
+.welcome .sign-in {
+    background-color: transparent;
+    padding: 10px 25px;
+    border-radius: 10px;
+    border: white 2px solid;
+    color: white;
+    margin: 20px 0 80px;
+}
+
+@media only screen and (max-width: 600px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+   .welcome {
+        display: none;   
+   }
+  }

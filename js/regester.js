@@ -88,11 +88,48 @@ submit.addEventListener("click", function () {
         errorconfirm.style.visibility = "visible";
         allValid = false;
     } else {
-        confirmpass.style.border = "3px solid green";
+        // confirmpass.style.border = "3px solid green";
         errorconfirm.style.visibility = "hidden";
     }
 
+
+
     if (allValid) {
-        alert("ok" );
+    
+        let obj = {
+            "name": name.value,
+            "Email": email.value,
+            "Username": username.value,
+            "Password": password.value,
+            "Phone": phone.value,
+        };
+    
+        fetch('http://localhost:3000/users')
+            .then(response => response.json())
+            .then(users => {
+                const userExists = users.some(user => user.Email === obj.Email || user.Username === obj.Username);
+    
+                if (!userExists) {
+                    return fetch('http://localhost:3000/users', {
+                        method: "POST",
+                        body: JSON.stringify(obj)
+                    });
+                } else {
+                    console.log("User already exists!");
+                    alert("User already exists in the database.");    
+                    name.value=""
+                    email.value=""
+                    username.value=""
+                    password.value=""
+                    phone.value=""
+                    confirmpass.value=""
+
+                            }
+            })
+            .then(response => {
+                if (response) console.log("add the user....");
+            })
+            .catch(error => console.error("An error occurred:", error));
+
     }
 });

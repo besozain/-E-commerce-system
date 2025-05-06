@@ -5,7 +5,7 @@
             "name": "beso",
             "Email": "besozain@gmail.com",
             "Username": "besozain",
-            "Password": 85214,
+            "Password": "123456",
             "Phone": "01020896307",
             "admin": "true"
         },
@@ -14,43 +14,7 @@
             "name": "hager",
             "Email": "ha1316625@gmail",
             "Username": "hager",
-            "Password": 2563,
-            "Phone": "01097077483",
-            "admin": "true"
-        },
-        {
-            "User id ": "121",
-            "name": "zain",
-            "Email": "zzzzzz@gmail.com",
-            "Username": "besozain",
-            "Password":25555,
-            "Phone": "01020896307",
-            "admin": "true"
-        },
-        {
-            "User id ": "12",
-            "name": "hager",
-            "Email": "cccccc@gmail",
-            "Username": "hager",
-            "Password": 22222,
-            "Phone": "01097077483",
-            "admin": "true"
-        },
-        {
-            "User id ": "121",
-            "name": "beso",
-            "Email": "ooooo@gmail.com",
-            "Username": "besozain",
-            "Password": 2225,
-            "Phone": "01020896307",
-            "admin": "true"
-        },
-        {
-            "User id ": "12",
-            "name": "hager",
-            "Email": "llllll@gmail",
-            "Username": "hager",
-            "Password": 2563,
+            "Password": "12385",
             "Phone": "01097077483",
             "admin": "true"
         }
