@@ -18,6 +18,8 @@ let errorphone=document.getElementById("errorphone")
 
 let submit =document.getElementById("submit")
 
+let signIn=document.getElementById("sign-in")
+
 
 
 
@@ -88,9 +90,12 @@ submit.addEventListener("click", function () {
         errorconfirm.style.visibility = "visible";
         allValid = false;
     } else {
-        // confirmpass.style.border = "3px solid green";
+        confirmpass.style.border = "3px solid green";
         errorconfirm.style.visibility = "hidden";
     }
+
+    let rules=document.getElementById('rules')
+
 
 
 
@@ -102,27 +107,50 @@ submit.addEventListener("click", function () {
             "Username": username.value,
             "Password": password.value,
             "Phone": phone.value,
+            "rules":rules.value
         };
     
         fetch('http://localhost:3000/users')
             .then(response => response.json())
             .then(users => {
                 const userExists = users.some(user => user.Email === obj.Email || user.Username === obj.Username);
+                const emailcheck=users.some(user=>user.Email==obj.Email)
+                const usernamecheck=users.some(user=>user.Username==obj.Username)
+                if(emailcheck){
+                    erroremail.style.visibility = "visible";
+                    email.style.border = "3px solid red";
+                    email.value = "";
+                }
+
+                if(usernamecheck){
+                    errorusername.style.visibility = "visible";
+                    username.style.border = "3px solid red";
+                    username.value = "";
+                }
     
                 if (!userExists) {
+                    if(rules.value=="seller"){
+                        window.location.href = "sellerDashboard.html";
+
+                    }else if (rules.value=="customer"){
+                        window.location.href = "home.html";
+                    }
+
                     return fetch('http://localhost:3000/users', {
                         method: "POST",
                         body: JSON.stringify(obj)
                     });
+
+                    
                 } else {
                     console.log("User already exists!");
-                    alert("User already exists in the database.");    
-                    name.value=""
-                    email.value=""
-                    username.value=""
-                    password.value=""
-                    phone.value=""
-                    confirmpass.value=""
+                    // alert("User already exists in the database.");    
+                    // name.value=""
+                    // email.value=""
+                    // username.value=""
+                    // password.value=""
+                    // phone.value=""
+                    // confirmpass.value=""
 
                             }
             })
@@ -133,3 +161,11 @@ submit.addEventListener("click", function () {
 
     }
 });
+
+
+
+
+signIn.addEventListener('click',function(){
+    window.location.href = "login.html";
+
+})

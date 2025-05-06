@@ -1,22 +1,40 @@
 {
-    "users": [
-        {
-            "User id ": "121",
-            "name": "beso",
-            "Email": "besozain@gmail.com",
-            "Username": "besozain",
-            "Password": "123456",
-            "Phone": "01020896307",
-            "admin": "true"
-        },
-        {
-            "User id ": "12",
-            "name": "hager",
-            "Email": "ha1316625@gmail",
-            "Username": "hager",
-            "Password": "12385",
-            "Phone": "01097077483",
-            "admin": "true"
-        }
-    ]
+  "users": [
+    {
+      "id": "8867",
+      "name": "beso",
+      "Email": "besozain@gmail.com",
+      "Username": "besozain",
+      "Password": "123456",
+      "Phone": "01020896307",
+      "rules": "admin"
+    },
+    {
+      "id": "81c1",
+      "name": "hager",
+      "Email": "ha1316625@gmail.com",
+      "Username": "hager",
+      "Password": "Moh&hag9501",
+      "Phone": "01097077483",
+      "rules": "admin"
+    },
+    {
+      "id": "aefc",
+      "name": "hager ahmed",
+      "Email": "ha131669@gmail.com",
+      "Username": "hay",
+      "Password": "Moh&hag9501",
+      "Phone": "01094452071",
+      "rules": "customer"
+    },
+    {
+      "id": "7a10",
+      "name": "ameria",
+      "Email": "am111@gmail.com",
+      "Username": "ameria",
+      "Password": "Moh@hag9501",
+      "Phone": "01026619459",
+      "rules": "customer"
+    }
+  ]
 }

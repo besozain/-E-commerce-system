@@ -24,7 +24,7 @@ main {
     margin: 50px 0 20px;
 }
 
-.register input, #submit {
+.register input, #submit,#rules {
     padding: 8px 10px;
     margin:  8px 0;
     border-radius: 5px;
@@ -50,6 +50,7 @@ main {
 div{
     color: red;
     visibility: hidden;
+    font-size: 9px;
 }
 
 .welcome {

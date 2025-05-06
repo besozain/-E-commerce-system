@@ -12,41 +12,49 @@
             <h1>"Welcome Back!</h1>
             <p>Enter your personal details to use all of site features
                 SIGN IN"</p>
-            <button class="sign-in">sign in</button>
+            <button class="sign-in" id="sign-in">sign in</button>
         </section>
     
         <section class="register">
             <h1>Sign up</h1>
             <form action="">
                 <!-- <label for="name"> name </label> -->
-                <br>
+                <!-- <br> -->
                 <input  type="text" name="name" id="name" class="register" placeholder="Enter the name">
                 <div id="errorname">user name should be more than three characters</div>
         
                 <!-- <label for="email"> email </label> -->
-                <br>
+                <!-- <br> -->
                 <input type="email" name="email" id="email" class="register" placeholder="Enter the email">
                 <div id="erroremail">invalid email</div>
         
                 <!-- <label for="username"> username </label> -->
-                <br>
+                <!-- <br> -->
                 <input type="text" name="username" id="username" class="register" placeholder="Enter the username">
                 <div id="errorusername">user name should be more than three characters</div>
         
                 <!-- <label for="password"> password </label> -->
-                <br>
+                <!-- <br> -->
                 <input type="password" name="password" id="password" class="register" placeholder="Enter the password">
                 <div id="errorpassword">weak password have to include upper and lower case and special chacacter</div>
         
                 <!-- <label for="confirm"> confirm </label> -->
-                <br>
+                <!-- <br> -->
                 <input type="password" name="confirm" id="confirm" class="register" placeholder="Enter the confirm">
                 <div id="errorconfirm">password does not match</div>
         
                 <!-- <label for="phone"> phone </label> -->
-                <br>
+                <!-- <br> -->
                 <input type="tel" name="phone" id="phone" class="register" placeholder="Enter the phone">
                 <div id="errorphone">invalid number</div>
+
+                <select name="rules" id="rules">
+                    <option value="customer">customer</option>
+                    <option value="seller">seller</option>
+                </select>
+                <br>
+                <br>
+                <br>
         
                 <button type="submit" id="submit">register</button>
             </form>

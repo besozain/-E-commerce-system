@@ -19,9 +19,15 @@
             </div>
             <p>or use your email and password</p>
             <form action="">
-                <input type="email" id="email" placeholder="Email"><br>
-                <input type="password" id="password" placeholder="Password"><br>
-                <button class="submit" type="submit">SIGN IN</button>
+                <input type="email" id="email" placeholder="Email">
+                <div id="erroremail">invalid email</div>
+
+                <!-- <br> -->
+                <input type="password" id="password" placeholder="Password">
+                <div id="errorpassword">weak password have to include upper and lower case and special chacacter</div>
+
+                <!-- <br> -->
+                <button class="submit" type="submit" id="submit">SIGN IN</button>
             </form>
             <p class="forget">Forgotten password?</p>
             
@@ -29,7 +35,7 @@
         <section class="welcome">
             <h1>Hello, Friend!</h1>
             <p>Register with your personal details to use all of site features</p>
-            <button class="sign-up">sign up</button>
+            <button class="sign-up" id="sign-up">sign up</button>
         </section>
         <script src="../js/validation.js"></script>
         <script src="../js/login.js"></script>
