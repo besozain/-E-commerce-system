@@ -31,14 +31,14 @@ const displayPaginationProduct = function (
       }
     }
     let action = document.createElement("td");
-    action.setAttribute('class' , "action")
+    action.setAttribute("class", "action");
     let iconUpdate = document.createElement("i");
     iconUpdate.setAttribute("class", "fa-solid fa-pen update");
     let iconDelete = document.createElement("i");
     iconDelete.setAttribute("class", "fa-solid fa-trash delete");
-    action.appendChild(iconUpdate)
-    action.appendChild(iconDelete)
-    createdTr.appendChild(action)
+    action.appendChild(iconUpdate);
+    action.appendChild(iconDelete);
+    createdTr.appendChild(action);
     targetTable.appendChild(createdTr);
   }
 };
@@ -215,27 +215,42 @@ let cencelproduct = document.getElementById("cencelproduct");
 let cart = document.getElementById("cart");
 let addproduct = document.getElementById("addproduct");
 
-headerclose.addEventListener("click", hideCart);
-cencelproduct.addEventListener("click", hideCart);
-cart.addEventListener("click", showCart);
+const showCart = function (x, y) {
+  //edit (x,y)
+  document.getElementById(x).style.display = "block";
+  document.getElementById(y).style.display = "block";
+};
+
+const hideCart = function (x, y) {
+  //edit (x,y)
+  document.getElementById(x).style.display = "none";
+  document.getElementById(y).style.display = "none";
+};
+
+headerclose.addEventListener("click", function () {
+  hideCart("cartOverlay", "cartModal");
+});
+cencelproduct.addEventListener("click", function () {
+  hideCart("cartOverlay", "cartModal");
+});
 addproduct.addEventListener("click", addProduct);
 
-function showCart() {
-  document.getElementById("cartOverlay").style.display = "block";
-  document.getElementById("cartModal").style.display = "block";
-}
+cart.addEventListener("click", function () {
+  showCart("cartOverlay", "cartModal");
+});
 
-function hideCart() {
-  document.getElementById("cartOverlay").style.display = "none";
-  document.getElementById("cartModal").style.display = "none";
-}
+// function hideCart() {
+//   document.getElementById("cartOverlay").style.display = "none";
+//   document.getElementById("cartModal").style.display = "none";
+// }
 
 function addProduct() {
   let productName = document.getElementById("productname").value;
   let category = document.getElementById("category").value;
   let description = document.getElementById("description").value;
   let price = document.getElementById("price").value;
-  let image =document.getElementById("imgurl").files[0]?.name || "No file selected";
+  let image =
+    document.getElementById("imgurl").files[0]?.name || "No file selected";
 
   if (productName && category && price && description && image) {
     let productData = {
@@ -272,3 +287,121 @@ function addProduct() {
     alert("Please fill in all required fields!");
   }
 }
+
+///////////////////////////////////////////////////////////////////////////
+//update and delete the product
+
+let targetTable = document.getElementById("targetTable");
+
+let headercloseupdate = document.getElementById("headercloseupdate");
+let cencelproductupdate = document.getElementById("cencelproductupdate");
+
+let productnameupdate = document.getElementById("productnameupdate");
+let categoryupdate = document.getElementById("categoryupdate");
+let descriptionupdate = document.getElementById("descriptionupdate");
+let priceupdate = document.getElementById("priceupdate");
+let imgurlupdate = document.getElementById("imgurlupdate");
+let productupdate = document.getElementById("productupdate");
+let productdelete = document.getElementById("productdelete");
+
+let cencelproductdelete = document.getElementById("cencelproductdelete");
+
+targetTable.addEventListener("click", function (e) {
+  // console.log(this)
+  // console.log(e.target)
+  let check = e.target;
+
+  if (
+    check.classList.contains("update") ||
+    check.classList.contains("delete")
+  ) {
+    let parentTr = check.closest("tr");
+    // console.log(parentTr)
+    let idtarget = parentTr.querySelector("td");
+    console.log(idtarget);
+
+    console.log(idtarget.textContent);
+    let valuetarget = idtarget.textContent;
+
+    if (check.classList.contains("update")) {
+      fetch("http://localhost:3000/products")
+        .then((response) => response.json())
+        .then((user) => {
+          const matchingUser = user.find((u) => u.id === valuetarget);
+
+          console.log(matchingUser);
+
+          productnameupdate.value = matchingUser.name;
+          priceupdate.value = Number(matchingUser.price);
+
+          // window.addEventListener("DomContentLoad",function(){        //////////edit
+          //   console.log(matchingUser.category)
+          //   categoryupdate.value=matchingUser.category
+          // })
+
+          descriptionupdate.value = matchingUser.description;
+          imgurlupdate = matchingUser.imageUrl; ///edit
+
+          console.log(productnameupdate);
+          showCart("cartOverlayupdate", "cartModalupdate");
+
+          productupdate.addEventListener("click", function () {
+            let productData = {
+              name: productnameupdate.value,
+              description: descriptionupdate.value,
+              price: priceupdate.value,
+              currency: "EGP",
+              inStock: "true",
+              category: categoryupdate.value,
+              imageUrl: `../assets/images/${imgurlupdate}`,
+            };
+
+            // let userId = 5; // ID of the user to modify
+
+            fetch(`http://localhost:3000/products/${valuetarget}`, {
+              method: "PATCH",
+              body: JSON.stringify(productData),
+            })
+              // .then(response => response.json())
+              .then((data) => console.log("modify successfilly....", data))
+              .catch((error) => console.error("modify not complete", error));
+          });
+        })
+        .then((response) => {
+          if (response) console.log("add the user....");
+        })
+        .catch((error) => console.error("An error occurred:", error));
+    } else {
+      showCart("cartOverlaydelete", "cartModaldelete");
+      productdelete.addEventListener("click",function(){
+        fetch(`http://localhost:3000/products/${valuetarget}`, {
+        
+          method: "DELETE",
+          // body: JSON.stringify({ name: "Kareem Updated" })
+      })
+      // .then(response => response.json())
+      .then(data => console.log("delete successfilly....", data))
+      .catch(error => console.error("delete not complete", error));
+        
+      })
+ 
+      parentTr.remove()
+    }
+   
+  }
+});
+
+headercloseupdate.addEventListener("click", function () {
+  hideCart("cartOverlayupdate", "cartModalupdate");
+});
+cencelproductupdate.addEventListener("click", function () {
+  hideCart("cartOverlayupdate", "cartModalupdate");
+});
+cencelproductdelete.addEventListener("click", function () {
+  hideCart("cartOverlaydelete", "cartModaldelete");
+});
+
+// //delete
+// let userId = 5; // ID of the user to modify
+
+

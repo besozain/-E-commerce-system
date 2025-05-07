@@ -65,7 +65,7 @@
             <button id="cart">Add Product</button>
           </div>
           <div class="table-container">
-            <table>
+            <table id="targetTable"> <!--add id-->
               <thead>
                 <tr>
                   <th>Name</th>
@@ -85,22 +85,23 @@
       </main>
     </div>
     <!-- ------------------------------------------------------------------------------------------------- -->
-    <div id="cartOverlay"></div>
-    <div id="cartModal">
-      <header id="header">
+    <div id="cartOverlay" class="cartOverlay"></div>
+    <div id="cartModal" class="cartModal">
+      <header id="header" class="header">
         <h2>Product Add</h2>
 
-        <button id="headerclose"><i class="fa-solid fa-xmark"></i></button>
+        <button id="headerclose" class="headerclose"><i class="fa-solid fa-xmark"></i></button>
       </header>
-      <main id="main">
+      <main id="main" class="main">
         <div class="input-group">
           <input
             type="text"
             id="productname"
+            class="productname"
             name="productname"
             placeholder="Product Name"
           />
-          <select name="category" id="category">
+          <select name="category" id="category" class="category">
             <option value="" disabled selected>Choose a Category</option>
             <option value="mobile">Mobile</option>
             <option value="laptop">Laptop</option>
@@ -112,25 +113,90 @@
           <textarea
             name="description"
             id="description"
+            class="description"
             placeholder="Product Description"
           ></textarea>
         </div>
 
         <div class="input-group">
-          <input type="number" id="price" name="price" placeholder="Price" />
-          <input type="file" id="imgurl" name="imgurl" />
+          <input type="number" id="price" class="price" name="price" placeholder="Price" />
+          <input type="file" id="imgurl" class="imgurl" name="imgurl" />
         </div>
       </main>
 
       <footer>
-        <button id="addproduct">Add</button>
-        <button id="cencelproduct">Cancel</button>
+        <button id="addproduct" class="addproduct">Add</button>
+        <button id="cencelproduct" class="cencelproduct">Cancel</button>
       </footer>
     </div>
+    <!-- ------------------------------------------------------------------------------------- -->
+     <!-- update -->
+    <div id="cartOverlayupdate" class="cartOverlay"></div>
+    <div id="cartModalupdate" class="cartModal">
+      <header id="headerupdate" class="header">
+        <h2>Edit Product</h2>
+
+        <button id="headercloseupdate" class="headerclose"><i class="fa-solid fa-xmark"></i></button>
+      </header>
+      <main id="mainupdate" class="main">
+        <div class="input-group">
+          <input
+            type="text"
+            id="productnameupdate"
+            class="productname"
+            name="productname"
+            placeholder="Product Name"
+          />
+          <select name="category" id="categoryupdate" class="category">
+            <option value="" disabled selected>Choose a Category</option>
+            <option value="mobile">Mobile</option>
+            <option value="laptops">Laptops</option>
+            <option value="accessories">Accessories</option>
+          </select>
+        </div>
+
+        <div class="input-group">
+          <textarea
+            name="description"
+            id="descriptionupdate"
+            class="description"
+            placeholder="Product Description"
+          ></textarea>
+        </div>
+
+        <div class="input-group">
+          <input type="number" id="priceupdate" class="price" name="price" placeholder="Price" />
+          <input type="file" id="imgurlupdate" class="imgurl" name="imgurl" />
+        </div>
+      </main>
+
+      <footer>
+        <button id="productupdate" class="addproduct">Update</button>
+        <button id="cencelproductupdate" class="cencelproduct">Cancel</button>           <!---edit it-->>
+      </footer>
+    </div>
+    <!-- -------------------------------------------------- -->
+     <!-- delete -->
+     <div id="cartOverlaydelete" class="cartOverlay"></div>
+     <div id="cartModaldelete" class="cartModal">
+       <!-- <header id="headerupdate" class="header"> -->
+         <h2>You are sure delete it ?</h2>
+ 
+         <!-- <button id="headercloseupdate" class="headerclose"><i class="fa-solid fa-xmark"></i></button> -->
+       <!-- </header> -->
+       
+       <footer>
+         <button id="productdelete" class="addproduct">delete</button>
+         <button id="cencelproductdelete" class="cencelproduct">Cancel</button>           <!---edit it-->>
+       </footer>
+
+     </div>
+
+     
+
 
     <script src="../js/status.js"></script>
     <script src="../js/adminutils.js"></script>
     <script src="../js/admindashboard.js"></script>
-    <!-- ------------------------------------------------------------------------------------- -->
   </body>
 </html>
