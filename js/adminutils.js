@@ -30,6 +30,15 @@ const displayPaginationProduct = function (
         createdTr.appendChild(id);
       }
     }
+    let action = document.createElement("td");
+    action.setAttribute('class' , "action")
+    let iconUpdate = document.createElement("i");
+    iconUpdate.setAttribute("class", "fa-solid fa-pen update");
+    let iconDelete = document.createElement("i");
+    iconDelete.setAttribute("class", "fa-solid fa-trash delete");
+    action.appendChild(iconUpdate)
+    action.appendChild(iconDelete)
+    createdTr.appendChild(action)
     targetTable.appendChild(createdTr);
   }
 };

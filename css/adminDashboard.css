@@ -209,6 +209,28 @@ tbody tr:hover {
 .id {
     display: none;
 }
+
+.action {
+    display: grid;
+}
+.action i {
+    margin: 3px;
+    border: 1px solid rgba(0, 0, 0, 0.286);
+    width: fit-content;
+    padding: 5px;
+    border-radius: 5px;
+}
+.action i:hover {
+    cursor: pointer;
+}
+.fa-trash {
+    color: rgb(148, 0, 0);
+    border-color: rgb(150, 0, 0);
+}
+.fa-pen {
+    color: rgb(0, 99, 49);
+    border-color: rgb(0, 99, 49);
+}
 /*************************************************************************************************************/
 
 #cartOverlay {
