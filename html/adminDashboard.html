@@ -1,87 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Admin Dashboard</title>
-    <link rel="stylesheet" href="../css/adminDashboard.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
+    <link rel="stylesheet" href="../css/adminDashboard.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
 
-<body>
+  <body>
     <div class="dashboard">
-        <!-- Sidebar -->
-        <aside class="sidebar">
-            <h1>Admin</h1>
-            <nav>
-                <a href="./adminDashboard.html">Products</a>
-                <a href="./adminusers.html">Users</a>
-                <a href="./adminorder.html">Orders</a>
-            </nav>
-        </aside>
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <h1>Admin</h1>
+        <nav>
+          <a href="./adminDashboard.html">Products</a>
+          <a href="./adminusers.html">Users</a>
+          <a href="./adminorder.html">Orders</a>
+        </nav>
+      </aside>
 
-        <!-- Main Content -->
-        <main class="main-content">
-            <header class="header">
-                <h2>Dashboard</h2>
-                <div class="admin-info">
-                    <span>Admin</span>
-                    <img src="../assets/images/admin.jpg" alt="Admin avatar">
-                </div>
-            </header>
+      <!-- Main Content -->
+      <main class="main-content">
+        <header class="header">
+          <h2>Dashboard</h2>
+          <div class="admin-info">
+            <span>Admin</span>
+            <img src="../assets/images/admin.jpg" alt="Admin avatar" />
+          </div>
+        </header>
 
-            <!-- Stats -->
-            <section class="stats">
-                <div class="stat-card">
-                    <h3>Products</h3>
-                    <p></p>
-                </div>
-                <div class="stat-card">
-                    <h3>Users</h3>
-                    <p></p>
-                </div>
-                <div class="stat-card">
-                    <h3>Orders</h3>
-                    <p></p>
-                </div>
-            </section>
+        <!-- Stats -->
+        <section class="stats">
+          <div class="stat-card">
+            <h3>Products</h3>
+            <p></p>
+          </div>
+          <div class="stat-card">
+            <h3>Users</h3>
+            <p></p>
+          </div>
+          <div class="stat-card">
+            <h3>Orders</h3>
+            <p></p>
+          </div>
+        </section>
 
-            <!-- Products Section -->
-            <section id="products" class="section">
-                <div class="section-header">
-                    <h3>Products</h3>
-                    <div class="search-bar">
-                        <input type="text" placeholder="Search products...">
-                        <button class="seerchBtn"><i class="fas fa-search"></i> Search</button>
-                    </div>
-                    <button>Add Product</button>
-                </div>
-                <div class="table-container">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Name</th>
-                                <th>Price</th>
-                                <th>Stock</th>
-                                <th>Category</th>
-                                <th class="id">id</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-              
-                        </tbody>
-                    </table>
-                    <div class="massageNoData">NO DATA</div>
-                    <div class="buttons"></div>
-                </div>
-            </section>
-
-        </main>
+        <!-- Products Section -->
+        <section id="products" class="section">
+          <div class="section-header">
+            <h3>Products</h3>
+            <div class="search-bar">
+              <input type="text" placeholder="Search products..." />
+              <button class="seerchBtn">
+                <i class="fas fa-search"></i> Search
+              </button>
+            </div>
+            <button id="cart">Add Product</button>
+          </div>
+          <div class="table-container">
+            <table>
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Price</th>
+                  <th>Stock</th>
+                  <th>Category</th>
+                  <th class="id">id</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+            <div class="massageNoData">NO DATA</div>
+            <div class="buttons"></div>
+          </div>
+        </section>
+      </main>
     </div>
+    <!-- ------------------------------------------------------------------------------------------------- -->
+    <div id="cartOverlay"></div>
+    <div id="cartModal">
+      <header id="header">
+        <h2>Product Add</h2>
+
+        <button id="headerclose"><i class="fa-solid fa-xmark"></i></button>
+      </header>
+      <main id="main">
+        <div class="input-group">
+          <input
+            type="text"
+            id="productname"
+            name="productname"
+            placeholder="Product Name"
+          />
+          <select name="category" id="category">
+            <option value="" disabled selected>Choose a Category</option>
+            <option value="mobile">Mobile</option>
+            <option value="laptop">Laptop</option>
+            <option value="accessories">Accessories</option>
+          </select>
+        </div>
+
+        <div class="input-group">
+          <textarea
+            name="description"
+            id="description"
+            placeholder="Product Description"
+          ></textarea>
+        </div>
+
+        <div class="input-group">
+          <input type="number" id="price" name="price" placeholder="Price" />
+          <input type="file" id="imgurl" name="imgurl" />
+        </div>
+      </main>
+
+      <footer>
+        <button id="addproduct">Add</button>
+        <button id="cencelproduct">Cancel</button>
+      </footer>
+    </div>
+
     <script src="../js/status.js"></script>
     <script src="../js/adminutils.js"></script>
     <script src="../js/admindashboard.js"></script>
-</body>
-
+    <!-- ------------------------------------------------------------------------------------- -->
+  </body>
 </html>

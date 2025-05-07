@@ -24,7 +24,7 @@ main {
     margin: 50px 0 20px;
 }
 
-.register input, #submit,#rules {
+.register input, #submit,#role {
     padding: 8px 10px;
     margin:  8px 0;
     border-radius: 5px;

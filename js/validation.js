@@ -8,7 +8,7 @@ const validateInput =function (inputElement, errorElement, pattern) {
         inputElement.style.border = "3px solid red";
         inputElement.value = "";
         errorElement.style.visibility = "visible";
-        inputElement.focus();
+        // inputElement.focus();
     }
 }
 

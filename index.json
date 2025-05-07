@@ -7,7 +7,7 @@
       "Username": "besozain",
       "Password": "Moh&hag9501",
       "Phone": "01020896307",
-      "rules": "admin"
+      "role": "admin"
     },
     {
       "id": "81c1",
@@ -16,7 +16,7 @@
       "Username": "hager",
       "Password": "Moh&hag9501",
       "Phone": "01097077483",
-      "rules": "admin"
+      "role": "admin"
     },
     {
       "id": "aefc",
@@ -25,7 +25,7 @@
       "Username": "hay",
       "Password": "Moh&hag9501",
       "Phone": "01094452071",
-      "rules": "customer"
+      "role": "customer"
     },
     {
       "id": "7a10",
@@ -34,15 +34,15 @@
       "Username": "ameria",
       "Password": "Moh@hag9501",
       "Phone": "01026619459",
-      "rules": "customer"
+      "role": "customer"
     }
   ],
-  "products" :[
+  "products": [
     {
       "id": "1",
       "name": "Laptop Dell Inspiron 15",
       "description": "15.6 inch FHD, Intel i7, 16GB RAM, 512GB SSD",
-      "price":" 15000.00",
+      "price": " 15000.00",
       "currency": "EGP",
       "inStock": "true",
       "category": "Laptops",
@@ -72,7 +72,7 @@
       "id": "1",
       "name": "Laptop Dell Inspiron 15",
       "description": "15.6 inch FHD, Intel i7, 16GB RAM, 512GB SSD",
-      "price":" 15000.00",
+      "price": " 15000.00",
       "currency": "EGP",
       "inStock": "true",
       "category": "Laptops",
@@ -102,7 +102,7 @@
       "id": "1",
       "name": "Laptop Dell Inspiron 15",
       "description": "15.6 inch FHD, Intel i7, 16GB RAM, 512GB SSD",
-      "price":" 15000.00",
+      "price": " 15000.00",
       "currency": "EGP",
       "inStock": "true",
       "category": "Laptops",
@@ -132,7 +132,7 @@
       "id": "1",
       "name": "Laptop Dell Inspiron 15",
       "description": "15.6 inch FHD, Intel i7, 16GB RAM, 512GB SSD",
-      "price":" 15000.00",
+      "price": " 15000.00",
       "currency": "EGP",
       "inStock": "true",
       "category": "Laptops",
@@ -162,7 +162,7 @@
       "id": "1",
       "name": "Laptop Dell Inspiron 15",
       "description": "15.6 inch FHD, Intel i7, 16GB RAM, 512GB SSD",
-      "price":" 15000.00",
+      "price": " 15000.00",
       "currency": "EGP",
       "inStock": "true",
       "category": "Laptops",
@@ -192,13 +192,12 @@
       "id": "1",
       "name": "Laptop Dell Inspiron 15",
       "description": "15.6 inch FHD, Intel i7, 16GB RAM, 512GB SSD",
-      "price":" 15000.00",
+      "price": " 15000.00",
       "currency": "EGP",
       "inStock": "true",
       "category": "Laptops",
       "imageUrl": "images/laptop-dell-inspiron.jpg"
     },
-  
     {
       "id": "3",
       "name": "Apple AirPods Pro",
@@ -213,13 +212,12 @@
       "id": "1",
       "name": "Laptop Dell Inspiron 15",
       "description": "15.6 inch FHD, Intel i7, 16GB RAM, 512GB SSD",
-      "price":" 15000.00",
+      "price": " 15000.00",
       "currency": "EGP",
       "inStock": "true",
       "category": "Laptops",
       "imageUrl": "images/laptop-dell-inspiron.jpg"
     },
-    
     {
       "id": "3",
       "name": "Apple AirPods Pro",
@@ -234,7 +232,7 @@
       "id": "1",
       "name": "Laptop Dell Inspiron 15",
       "description": "15.6 inch FHD, Intel i7, 16GB RAM, 512GB SSD",
-      "price":" 15000.00",
+      "price": " 15000.00",
       "currency": "EGP",
       "inStock": "true",
       "category": "Laptops",
@@ -279,147 +277,189 @@
       "inStock": "false",
       "category": "Accessories",
       "imageUrl": "images/airpods-pro.jpg"
+    },
+    {
+      "id": "da7b",
+      "name": "dell",
+      "description": "fast and high quality",
+      "price": "250000",
+      "currency": "EGP",
+      "inStock": "true",
+      "category": "laptop",
+      "imageUrl": "../assets/images/Dell-Sept-14.jpg"
+    },
+    {
+      "id": "90c7",
+      "name": "dell15",
+      "description": "fast and quilty",
+      "price": "500000",
+      "currency": "EGP",
+      "inStock": "true",
+      "category": "laptop",
+      "imageUrl": "../assets/images/Dell-Sept-14.jpg"
     }
   ],
-  "orders" : [
+  "orders": [
     {
       "customer_email": "ahmed@example.com",
       "product_id": 101,
       "product_count": 2,
-      "total_price": 400
+      "total_price": 400,
+      "id": "5a90"
     },
     {
       "customer_email": "sara@example.com",
       "product_id": 103,
       "product_count": 1,
-      "total_price": 250
+      "total_price": 250,
+      "id": "a136"
     },
     {
       "customer_email": "mohamed@example.com",
       "product_id": 102,
       "product_count": 3,
-      "total_price": 750
+      "total_price": 750,
+      "id": "30dc"
     },
     {
       "customer_email": "laila@example.com",
       "product_id": 104,
       "product_count": 1,
-      "total_price": 300
+      "total_price": 300,
+      "id": "7741"
     },
     {
       "customer_email": "sara@example.com",
       "product_id": 103,
       "product_count": 1,
-      "total_price": 250
+      "total_price": 250,
+      "id": "eb9f"
     },
     {
       "customer_email": "mohamed@example.com",
       "product_id": 102,
       "product_count": 3,
-      "total_price": 750
+      "total_price": 750,
+      "id": "3834"
     },
     {
       "customer_email": "laila@example.com",
       "product_id": 104,
       "product_count": 1,
-      "total_price": 300
+      "total_price": 300,
+      "id": "fd44"
     },
     {
       "customer_email": "sara@example.com",
       "product_id": 103,
       "product_count": 1,
-      "total_price": 250
+      "total_price": 250,
+      "id": "b196"
     },
     {
       "customer_email": "mohamed@example.com",
       "product_id": 102,
       "product_count": 3,
-      "total_price": 750
+      "total_price": 750,
+      "id": "167a"
     },
     {
       "customer_email": "laila@example.com",
       "product_id": 104,
       "product_count": 1,
-      "total_price": 300
+      "total_price": 300,
+      "id": "502f"
     },
     {
       "customer_email": "sara@example.com",
       "product_id": 103,
       "product_count": 1,
-      "total_price": 250
+      "total_price": 250,
+      "id": "507d"
     },
     {
       "customer_email": "mohamed@example.com",
       "product_id": 102,
       "product_count": 3,
-      "total_price": 750
+      "total_price": 750,
+      "id": "7e56"
     },
     {
       "customer_email": "laila@example.com",
       "product_id": 104,
       "product_count": 1,
-      "total_price": 300
+      "total_price": 300,
+      "id": "68a6"
     },
     {
       "customer_email": "sara@example.com",
       "product_id": 103,
       "product_count": 1,
-      "total_price": 250
+      "total_price": 250,
+      "id": "6fa9"
     },
     {
       "customer_email": "mohamed@example.com",
       "product_id": 102,
       "product_count": 3,
-      "total_price": 750
+      "total_price": 750,
+      "id": "4de0"
     },
     {
       "customer_email": "laila@example.com",
       "product_id": 104,
       "product_count": 1,
-      "total_price": 300
+      "total_price": 300,
+      "id": "99b6"
     },
     {
       "customer_email": "sara@example.com",
       "product_id": 103,
       "product_count": 1,
-      "total_price": 250
+      "total_price": 250,
+      "id": "a99d"
     },
     {
       "customer_email": "mohamed@example.com",
       "product_id": 102,
       "product_count": 3,
-      "total_price": 750
+      "total_price": 750,
+      "id": "2890"
     },
     {
       "customer_email": "laila@example.com",
       "product_id": 104,
       "product_count": 1,
-      "total_price": 300
+      "total_price": 300,
+      "id": "937b"
     },
     {
       "customer_email": "sara@example.com",
       "product_id": 103,
       "product_count": 1,
-      "total_price": 250
+      "total_price": 250,
+      "id": "3473"
     },
     {
       "customer_email": "mohamed@example.com",
       "product_id": 102,
       "product_count": 3,
-      "total_price": 750
+      "total_price": 750,
+      "id": "8c91"
     },
     {
       "customer_email": "laila@example.com",
       "product_id": 104,
       "product_count": 1,
-      "total_price": 300
+      "total_price": 300,
+      "id": "b1bf"
     },
     {
       "customer_email": "nour@example.com",
       "product_id": 105,
       "product_count": 4,
-      "total_price": 1200
+      "total_price": 1200,
+      "id": "b3a1"
     }
   ]
-  
 }

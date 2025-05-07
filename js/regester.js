@@ -94,7 +94,7 @@ submit.addEventListener("click", function () {
         errorconfirm.style.visibility = "hidden";
     }
 
-    let rules=document.getElementById('rules')
+    let role=document.getElementById('role')
 
 
 
@@ -107,7 +107,7 @@ submit.addEventListener("click", function () {
             "Username": username.value,
             "Password": password.value,
             "Phone": phone.value,
-            "rules":rules.value
+            "role":role.value
         };
     
         fetch('http://localhost:3000/users')
@@ -129,10 +129,10 @@ submit.addEventListener("click", function () {
                 }
     
                 if (!userExists) {
-                    if(rules.value=="seller"){
+                    if(role.value=="seller"){
                         window.location.href = "sellerDashboard.html";
 
-                    }else if (rules.value=="customer"){
+                    }else if (role.value=="customer"){
                         window.location.href = "home.html";
                     }
 

@@ -57,11 +57,11 @@ submit.addEventListener('click',function(){
             if (userExists) {
 
                 // window.location.href = "sellerDashboard.html";
-                if(matchingUser.rules=='customer'){
+                if(matchingUser.role=='customer'){
                     window.location.href = "home.html";
-                }else if(matchingUser.rules=='seller'){
+                }else if(matchingUser.role=='seller'){
                     window.location.href = "sellerDashboard.html";
-                }else if(matchingUser.rules=='admin'){
+                }else if(matchingUser.role=='admin'){
                     window.location.href = "adminDashboard.html";
                 }
                
