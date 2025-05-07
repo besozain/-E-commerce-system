@@ -373,21 +373,20 @@ targetTable.addEventListener("click", function (e) {
         .catch((error) => console.error("An error occurred:", error));
     } else {
       showCart("cartOverlaydelete", "cartModaldelete");
-      productdelete.addEventListener("click",function(){
+      productdelete.addEventListener("click", function () {
         fetch(`http://localhost:3000/products/${valuetarget}`, {
-        
           method: "DELETE",
-          // body: JSON.stringify({ name: "Kareem Updated" })
-      })
-      // .then(response => response.json())
-      .then(data => console.log("delete successfilly....", data))
-      .catch(error => console.error("delete not complete", error));
-        
-      })
- 
-      parentTr.remove()
+          
+        })
+          
+          .then((data) => console.log("delete successfilly....", data))
+          .catch((error) => console.error("delete not complete", error));
+          parentTr.remove();
+
+      });
+
+     
     }
-   
   }
 });
 
@@ -403,5 +402,3 @@ cencelproductdelete.addEventListener("click", function () {
 
 // //delete
 // let userId = 5; // ID of the user to modify
-
-

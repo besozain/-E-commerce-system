@@ -39,56 +39,6 @@
   ],
   "products": [
     {
-      "id": "2",
-      "name": "Samsung Galaxy S23",
-      "description": "6.1 inch display, 128GB storage, 8GB RAM",
-      "price": "22000.00",
-      "currency": "EGP",
-      "inStock": "true",
-      "category": "Smartphones",
-      "imageUrl": "images/samsung-galaxy-s23.jpg"
-    },
-    {
-      "id": "3",
-      "name": "Apple AirPods Pro",
-      "description": "Noise-cancelling wireless earbuds",
-      "price": "6200.00",
-      "currency": "EGP",
-      "inStock": "false",
-      "category": "Accessories",
-      "imageUrl": "images/airpods-pro.jpg"
-    },
-    {
-      "id": "1",
-      "name": "Laptop Dell Inspiron 15",
-      "description": "15.6 inch FHD, Intel i7, 16GB RAM, 512GB SSD",
-      "price": " 15000.00",
-      "currency": "EGP",
-      "inStock": "true",
-      "category": "Laptops",
-      "imageUrl": "images/laptop-dell-inspiron.jpg"
-    },
-    {
-      "id": "2",
-      "name": "Samsung Galaxy S23",
-      "description": "6.1 inch display, 128GB storage, 8GB RAM",
-      "price": "22000.00",
-      "currency": "EGP",
-      "inStock": "true",
-      "category": "Smartphones",
-      "imageUrl": "images/samsung-galaxy-s23.jpg"
-    },
-    {
-      "id": "3",
-      "name": "Apple AirPods Pro",
-      "description": "Noise-cancelling wireless earbuds",
-      "price": "6200.00",
-      "currency": "EGP",
-      "inStock": "false",
-      "category": "Accessories",
-      "imageUrl": "images/airpods-pro.jpg"
-    },
-    {
       "id": "1",
       "name": "Laptop Dell Inspiron 15",
       "description": "15.6 inch FHD, Intel i7, 16GB RAM, 512GB SSD",
@@ -252,6 +202,466 @@
       "id": "90c7",
       "name": "dell15",
       "description": "fast and quilty",
+      "price": "500000",
+      "currency": "EGP",
+      "inStock": "true",
+      "category": "laptop",
+      "imageUrl": "../assets/images/Dell-Sept-14.jpg"
+    },
+    {
+      "id": "ab9f",
+      "name": "dell15",
+      "description": "fast",
+      "price": "500000",
+      "currency": "EGP",
+      "inStock": "true",
+      "category": "laptop",
+      "imageUrl": "../assets/images/No file selected"
+    },
+    {
+      "id": "757a",
+      "name": "dell15",
+      "description": "fast",
+      "price": "500000",
+      "currency": "EGP",
+      "inStock": "true",
+      "category": "laptop",
+      "imageUrl": "../assets/images/No file selected"
+    },
+    {
+      "id": "97b8",
+      "name": "dell15",
+      "description": "fast",
+      "price": "500000",
+      "currency": "EGP",
+      "inStock": "true",
+      "category": "laptop",
+      "imageUrl": "../assets/images/No file selected"
+    },
+    {
+      "id": "c326",
+      "name": "dell15",
+      "description": "fast",
+      "price": "500000",
+      "currency": "EGP",
+      "inStock": "true",
+      "category": "laptop",
+      "imageUrl": "../assets/images/No file selected"
+    },
+    {
+      "id": "1f10",
+      "name": "dell15",
+      "description": "fast",
+      "price": "500000",
+      "currency": "EGP",
+      "inStock": "true",
+      "category": "laptop",
+      "imageUrl": "../assets/images/No file selected"
+    },
+    {
+      "id": "7f71",
+      "name": "dell15",
+      "description": "fast",
+      "price": "500000",
+      "currency": "EGP",
+      "inStock": "true",
+      "category": "laptop",
+      "imageUrl": "../assets/images/No file selected"
+    },
+    {
+      "id": "e365",
+      "name": "dell15",
+      "description": "fast",
+      "price": "500000",
+      "currency": "EGP",
+      "inStock": "true",
+      "category": "laptop",
+      "imageUrl": "../assets/images/No file selected"
+    },
+    {
+      "id": "6536",
+      "name": "dell15",
+      "description": "fast",
+      "price": "500000",
+      "currency": "EGP",
+      "inStock": "true",
+      "category": "laptop",
+      "imageUrl": "../assets/images/No file selected"
+    },
+    {
+      "id": "3d91",
+      "name": "dell15",
+      "description": "fast",
+      "price": "500000",
+      "currency": "EGP",
+      "inStock": "true",
+      "category": "laptop",
+      "imageUrl": "../assets/images/Dell-Sept-14.jpg"
+    },
+    {
+      "id": "fa4b",
+      "name": "dell15",
+      "description": "fast",
+      "price": "500000",
+      "currency": "EGP",
+      "inStock": "true",
+      "category": "laptop",
+      "imageUrl": "../assets/images/Dell-Sept-14.jpg"
+    },
+    {
+      "id": "6397",
+      "name": "dell15",
+      "description": "fast",
+      "price": "500000",
+      "currency": "EGP",
+      "inStock": "true",
+      "category": "laptop",
+      "imageUrl": "../assets/images/Dell-Sept-14.jpg"
+    },
+    {
+      "id": "80de",
+      "name": "dell15",
+      "description": "fast",
+      "price": "500000",
+      "currency": "EGP",
+      "inStock": "true",
+      "category": "laptop",
+      "imageUrl": "../assets/images/Dell-Sept-14.jpg"
+    },
+    {
+      "id": "978b",
+      "name": "dell15",
+      "description": "fast",
+      "price": "500000",
+      "currency": "EGP",
+      "inStock": "true",
+      "category": "laptop",
+      "imageUrl": "../assets/images/Dell-Sept-14.jpg"
+    },
+    {
+      "id": "6703",
+      "name": "dell15",
+      "description": "fast",
+      "price": "500000",
+      "currency": "EGP",
+      "inStock": "true",
+      "category": "laptop",
+      "imageUrl": "../assets/images/Dell-Sept-14.jpg"
+    },
+    {
+      "id": "98c2",
+      "name": "dell15",
+      "description": "fast",
+      "price": "500000",
+      "currency": "EGP",
+      "inStock": "true",
+      "category": "laptop",
+      "imageUrl": "../assets/images/Dell-Sept-14.jpg"
+    },
+    {
+      "id": "9d42",
+      "name": "dell15",
+      "description": "fast",
+      "price": "500000",
+      "currency": "EGP",
+      "inStock": "true",
+      "category": "laptop",
+      "imageUrl": "../assets/images/Dell-Sept-14.jpg"
+    },
+    {
+      "id": "cc1a",
+      "name": "dell15",
+      "description": "fast",
+      "price": "500000",
+      "currency": "EGP",
+      "inStock": "true",
+      "category": "laptop",
+      "imageUrl": "../assets/images/Dell-Sept-14.jpg"
+    },
+    {
+      "id": "b8a2",
+      "name": "dell15",
+      "description": "fast",
+      "price": "500000",
+      "currency": "EGP",
+      "inStock": "true",
+      "category": "laptop",
+      "imageUrl": "../assets/images/Dell-Sept-14.jpg"
+    },
+    {
+      "id": "9235",
+      "name": "dell15",
+      "description": "fast",
+      "price": "500000",
+      "currency": "EGP",
+      "inStock": "true",
+      "category": "laptop",
+      "imageUrl": "../assets/images/Dell-Sept-14.jpg"
+    },
+    {
+      "id": "d27f",
+      "name": "dell15",
+      "description": "fast",
+      "price": "500000",
+      "currency": "EGP",
+      "inStock": "true",
+      "category": "laptop",
+      "imageUrl": "../assets/images/Dell-Sept-14.jpg"
+    },
+    {
+      "id": "1566",
+      "name": "dell15",
+      "description": "fast",
+      "price": "500000",
+      "currency": "EGP",
+      "inStock": "true",
+      "category": "laptop",
+      "imageUrl": "../assets/images/Dell-Sept-14.jpg"
+    },
+    {
+      "id": "9cd5",
+      "name": "dell15",
+      "description": "fast",
+      "price": "500000",
+      "currency": "EGP",
+      "inStock": "true",
+      "category": "laptop",
+      "imageUrl": "../assets/images/Dell-Sept-14.jpg"
+    },
+    {
+      "id": "d040",
+      "name": "dell15",
+      "description": "fast",
+      "price": "500000",
+      "currency": "EGP",
+      "inStock": "true",
+      "category": "laptop",
+      "imageUrl": "../assets/images/Dell-Sept-14.jpg"
+    },
+    {
+      "id": "be1c",
+      "name": "dell15",
+      "description": "fast",
+      "price": "500000",
+      "currency": "EGP",
+      "inStock": "true",
+      "category": "laptop",
+      "imageUrl": "../assets/images/Dell-Sept-14.jpg"
+    },
+    {
+      "id": "18ac",
+      "name": "dell15",
+      "description": "fast",
+      "price": "500000",
+      "currency": "EGP",
+      "inStock": "true",
+      "category": "laptop",
+      "imageUrl": "../assets/images/Dell-Sept-14.jpg"
+    },
+    {
+      "id": "f09c",
+      "name": "dell15",
+      "description": "fast",
+      "price": "500000",
+      "currency": "EGP",
+      "inStock": "true",
+      "category": "laptop",
+      "imageUrl": "../assets/images/Dell-Sept-14.jpg"
+    },
+    {
+      "id": "96b3",
+      "name": "dell15",
+      "description": "fast",
+      "price": "500000",
+      "currency": "EGP",
+      "inStock": "true",
+      "category": "laptop",
+      "imageUrl": "../assets/images/Dell-Sept-14.jpg"
+    },
+    {
+      "id": "f5f2",
+      "name": "dell15",
+      "description": "fast",
+      "price": "500000",
+      "currency": "EGP",
+      "inStock": "true",
+      "category": "laptop",
+      "imageUrl": "../assets/images/Dell-Sept-14.jpg"
+    },
+    {
+      "id": "2979",
+      "name": "dell15",
+      "description": "fast",
+      "price": "500000",
+      "currency": "EGP",
+      "inStock": "true",
+      "category": "laptop",
+      "imageUrl": "../assets/images/Dell-Sept-14.jpg"
+    },
+    {
+      "id": "385b",
+      "name": "dell15",
+      "description": "fast",
+      "price": "500000",
+      "currency": "EGP",
+      "inStock": "true",
+      "category": "laptop",
+      "imageUrl": "../assets/images/Dell-Sept-14.jpg"
+    },
+    {
+      "id": "a185",
+      "name": "dell15",
+      "description": "fast",
+      "price": "500000",
+      "currency": "EGP",
+      "inStock": "true",
+      "category": "laptop",
+      "imageUrl": "../assets/images/Dell-Sept-14.jpg"
+    },
+    {
+      "id": "2f54",
+      "name": "dell15",
+      "description": "fast",
+      "price": "500000",
+      "currency": "EGP",
+      "inStock": "true",
+      "category": "laptop",
+      "imageUrl": "../assets/images/Dell-Sept-14.jpg"
+    },
+    {
+      "id": "6212",
+      "name": "dell15",
+      "description": "fast",
+      "price": "500000",
+      "currency": "EGP",
+      "inStock": "true",
+      "category": "laptop",
+      "imageUrl": "../assets/images/Dell-Sept-14.jpg"
+    },
+    {
+      "id": "3d58",
+      "name": "dell15",
+      "description": "fast",
+      "price": "500000",
+      "currency": "EGP",
+      "inStock": "true",
+      "category": "laptop",
+      "imageUrl": "../assets/images/Dell-Sept-14.jpg"
+    },
+    {
+      "id": "7e0d",
+      "name": "dell15",
+      "description": "fast",
+      "price": "500000",
+      "currency": "EGP",
+      "inStock": "true",
+      "category": "laptop",
+      "imageUrl": "../assets/images/Dell-Sept-14.jpg"
+    },
+    {
+      "id": "880f",
+      "name": "dell15",
+      "description": "fast",
+      "price": "500000",
+      "currency": "EGP",
+      "inStock": "true",
+      "category": "laptop",
+      "imageUrl": "../assets/images/Dell-Sept-14.jpg"
+    },
+    {
+      "id": "3529",
+      "name": "dell15",
+      "description": "fast",
+      "price": "500000",
+      "currency": "EGP",
+      "inStock": "true",
+      "category": "laptop",
+      "imageUrl": "../assets/images/Dell-Sept-14.jpg"
+    },
+    {
+      "id": "f62b",
+      "name": "dell15",
+      "description": "fast",
+      "price": "500000",
+      "currency": "EGP",
+      "inStock": "true",
+      "category": "laptop",
+      "imageUrl": "../assets/images/Dell-Sept-14.jpg"
+    },
+    {
+      "id": "8f70",
+      "name": "dell15",
+      "description": "fast",
+      "price": "500000",
+      "currency": "EGP",
+      "inStock": "true",
+      "category": "laptop",
+      "imageUrl": "../assets/images/Dell-Sept-14.jpg"
+    },
+    {
+      "id": "3988",
+      "name": "dell15",
+      "description": "fast",
+      "price": "500000",
+      "currency": "EGP",
+      "inStock": "true",
+      "category": "laptop",
+      "imageUrl": "../assets/images/Dell-Sept-14.jpg"
+    },
+    {
+      "id": "f7f4",
+      "name": "dell15",
+      "description": "fast",
+      "price": "500000",
+      "currency": "EGP",
+      "inStock": "true",
+      "category": "laptop",
+      "imageUrl": "../assets/images/Dell-Sept-14.jpg"
+    },
+    {
+      "id": "eae4",
+      "name": "dell15",
+      "description": "fast",
+      "price": "500000",
+      "currency": "EGP",
+      "inStock": "true",
+      "category": "laptop",
+      "imageUrl": "../assets/images/Dell-Sept-14.jpg"
+    },
+    {
+      "id": "7454",
+      "name": "dell15",
+      "description": "fast",
+      "price": "500000",
+      "currency": "EGP",
+      "inStock": "true",
+      "category": "laptop",
+      "imageUrl": "../assets/images/Dell-Sept-14.jpg"
+    },
+    {
+      "id": "dae2",
+      "name": "dell15",
+      "description": "fast",
+      "price": "500000",
+      "currency": "EGP",
+      "inStock": "true",
+      "category": "laptop",
+      "imageUrl": "../assets/images/Dell-Sept-14.jpg"
+    },
+    {
+      "id": "2da2",
+      "name": "dell15",
+      "description": "fast",
+      "price": "500000",
+      "currency": "EGP",
+      "inStock": "true",
+      "category": "laptop",
+      "imageUrl": "../assets/images/Dell-Sept-14.jpg"
+    },
+    {
+      "id": "0605",
+      "name": "dell15",
+      "description": "fast",
       "price": "500000",
       "currency": "EGP",
       "inStock": "true",
