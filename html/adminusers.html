@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>users</title>
   <link rel="stylesheet" href="../css/adminDashboard.css">
+  <!-- <link rel="stylesheet" href="../css/register.css"> -->
   <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -61,7 +62,7 @@
             <input type="text" placeholder="Search Users...">
             <button class="seerchBtn"><i class="fas fa-search"></i> Search</button>
           </div>
-          <button>Add user</button>
+          <button id="addu">Add user</button> <!--add id-->
         </div>
 
         <div class="table-container">
@@ -84,12 +85,100 @@
                     <div class="buttons"></div>
         </div>
       </section>
+<!-- ------------------------------------------------------------------------------------------------------ -->
 
-    </main>
+<div id="cartOverlay" class="cartOverlay"></div>
+    <div id="cartModal" class="cartModal">
+      <header id="header" class="header">
+        <h2>Add User</h2>
+        <button id="headerclose" class="headerclose"><i class="fa-solid fa-xmark"></i></button>
+      </header>
+
+      <section class="register">
+        <!-- <h1>Sign up</h1> -->
+        <!-- <form action=""> -->
+            <!-- <label for="name"> name </label> -->
+            <!-- <br> -->
+            <input  type="text" name="name" id="name" class="register" placeholder="Enter the name">
+            <div id="errorname">user name should be more than three characters</div>
+    
+            <!-- <label for="email"> email </label> -->
+            <!-- <br> -->
+            <input type="email" name="email" id="email" class="register" placeholder="Enter the email">
+            <div id="erroremail">invalid email</div>
+    
+            <!-- <label for="username"> username </label> -->
+            <!-- <br> -->
+            <input type="text" name="username" id="username" class="register" placeholder="Enter the username">
+            <div id="errorusername">user name should be more than three characters</div>
+    
+            <!-- <label for="password"> password </label> -->
+            <!-- <br> -->
+            <input type="password" name="password" id="password" class="register" placeholder="Enter the password">
+            <div id="errorpassword">weak password have to include upper and lower case and special chacacter</div>
+    
+            <!-- <label for="confirm"> confirm </label> -->
+            <!-- <br> -->
+            <input type="password" name="confirm" id="confirm" class="register" placeholder="Enter the confirm">
+            <div id="errorconfirm">password does not match</div>
+    
+            <!-- <label for="phone"> phone </label> -->
+            <!-- <br> -->
+            <input type="tel" name="phone" id="phone" class="register" placeholder="Enter the phone">
+            <div id="errorphone">invalid number</div>
+
+            <select name="role" id="role">
+                <option value="customer">customer</option>
+                <option value="seller">seller</option>
+                <option value="admin">admin</option>
+            </select>
+            <br>
+            <br>
+            <br>
+    
+            <!-- <button type="submit" id="submit">register</button> -->
+        <!-- </form> -->
+    </section>
+
+
+      <footer>
+        <button id="adduser" class="addproduct">Add</button>
+        <button id="cencelproduct" class="cencelproduct">Cancel</button>
+      </footer>
+      <!-- <span id="submit"></span>
+      <span id="signIn"></span> -->
+    </div>
+
+
+  <!----------------------------------------------------------------------------------------------------->
+  <div id="cartOverlaydelete" class="cartOverlay"></div>
+  <div id="cartModaldelete" class="cartModal">
+    <!-- <header id="headerupdate" class="header"> -->
+      <h2>You are sure delete it ?</h2>
+
+      <!-- <button id="headercloseupdate" class="headerclose"><i class="fa-solid fa-xmark"></i></button> -->
+    <!-- </header> -->
+    
+    <footer>
+      <button id="productdelete" class="addproduct">delete</button>
+      <button id="cencelproductdelete" class="cencelproduct">Cancel</button>           <!---edit it-->>
+    </footer>
+
   </div>
+
+
+
+
+
+
+  
+  </div>
+  <script src="../js/validation.js"></script>
+  <script src="../js/regester.js"></script>
   <script src="../js/status.js"></script>
   <script src="../js/adminutils.js"></script>
   <script src="../js/adminUser.js"></script>
+
   
 </body>
 
