@@ -310,23 +310,23 @@ const currentBtnColor = function (b) {
 
 
 
-///////////////////////////////////////////////////////////////////////////////////
+// /////////////////////////////////////////////////////////////////////////////////
 // let headerclose = document.getElementById("headerclose");
 // let cencelproduct = document.getElementById("cencelproduct");
 // let cart = document.getElementById("cart");
 // let addproduct = document.getElementById("addproduct");
 
-// const showCart = function (x, y) {
-//   //edit (x,y)
-//   document.getElementById(x).style.display = "block";
-//   document.getElementById(y).style.display = "block";
-// };
+const showCart = function (x, y) {
+  //edit (x,y)
+  document.getElementById(x).style.display = "block";
+  document.getElementById(y).style.display = "block";
+};
 
-// const hideCart = function (x, y) {
-//   //edit (x,y)
-//   document.getElementById(x).style.display = "none";
-//   document.getElementById(y).style.display = "none";
-// };
+const hideCart = function (x, y) {
+  //edit (x,y)
+  document.getElementById(x).style.display = "none";
+  document.getElementById(y).style.display = "none";
+};
 
 // headerclose.addEventListener("click", function () {
 //   hideCart("cartOverlay", "cartModal");
@@ -446,7 +446,10 @@ const currentBtnColor = function (b) {
 //           console.log(productnameupdate);
 //           showCart("cartOverlayupdate", "cartModalupdate");
 
+         
+
 //           productupdate.addEventListener("click", function () {
+
 //             let productData = {
 //               name: productnameupdate.value,
 //               description: descriptionupdate.value,
@@ -456,14 +459,14 @@ const currentBtnColor = function (b) {
 //               category: categoryupdate.value,
 //               imageUrl: `../assets/images/${imgurlupdate}`,
 //             };
+//             console.log("por",productData)
 
-//             // let userId = 5; // ID of the user to modify
 
 //             fetch(`http://localhost:3000/products/${valuetarget}`, {
 //               method: "PATCH",
 //               body: JSON.stringify(productData),
 //             })
-//               // .then(response => response.json())
+//               .then(response => response.json())
 //               .then((data) => console.log("modify successfilly....", data))
 //               .catch((error) => console.error("modify not complete", error));
 //           });
@@ -501,5 +504,5 @@ const currentBtnColor = function (b) {
 //   hideCart("cartOverlaydelete", "cartModaldelete");
 // });
 
-// // //delete
-// // let userId = 5; // ID of the user to modify
+// // // //delete
+// // // let userId = 5; // ID of the user to modify

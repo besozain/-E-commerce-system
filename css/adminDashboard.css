@@ -337,3 +337,17 @@ tbody tr:hover {
     display: flex;
     justify-content: end;
   }
+
+  /*******************************************************/
+
+  .register input{
+    width: 90%;
+  }
+  .register select{
+    width: 95%;
+  }
+  .register div{
+    font-size: 15px;
+    text-align: center;
+    visibility: hidden;
+  }
