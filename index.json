@@ -35,6 +35,15 @@
       "Password": "Moh@hag9501",
       "Phone": "01026619459",
       "role": "customer"
+    },
+    {
+      "id": "1660",
+      "name": "beso",
+      "Email": "basmazain102000@gmail.com",
+      "Username": "basmazain",
+      "Password": "Kayonaa2000@",
+      "Phone": "01020896307",
+      "role": "seller"
     }
   ],
   "products": [
