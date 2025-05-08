@@ -1,11 +1,12 @@
 //pagination
-const pagination = function() {}
 
-const displayPaginationProduct = function (
+const displayPagination = function (
   ourData,
   currentPage,
   itemsPerPage,
-  targetTable
+  targetTable,
+  customer = []
+
 ) {
   targetTable.innerText = "";
   let start = (currentPage - 1) * itemsPerPage;
@@ -16,11 +17,12 @@ const displayPaginationProduct = function (
     let createdTr = document.createElement("tr");
     // for loop to obj
     for (let k in obj) {
-      if (k == "name" || k == "price" || k == "category" || k == "inStock") {
+      if (customer.includes(k)) {
         let createdTd = document.createElement("td");
         createdTd.innerText = obj[k];
         createdTr.appendChild(createdTd);
-      } else if (k == "id") {
+      }
+      if (k == "id") {
         let id = document.createElement("td");
         id.setAttribute("class", "id");
         id.innerHTML = obj[k];
@@ -39,98 +41,13 @@ const displayPaginationProduct = function (
     targetTable.appendChild(createdTr);
   }
 };
-const displayPaginationOrder = function (
-  ourData,
-  currentPage,
-  itemsPerPage,
-  targetTable
-) {
-  targetTable.innerText = "";
-  let start = (currentPage - 1) * itemsPerPage;
-  let end = currentPage * itemsPerPage;
-  let paginationArray = ourData.slice(start, end);
-
-  for (let obj of paginationArray) {
-    let createdTr = document.createElement("tr");
-    // for loop to obj
-    for (let k in obj) {
-      if (k == "product_id"|| k == "customer_email" || k == "product_count" || k == "total_price") {
-        let createdTd = document.createElement("td");
-        createdTd.innerText = obj[k];
-        createdTr.appendChild(createdTd);
-      } else if (k == "id") {
-        let id = document.createElement("td");
-        id.setAttribute("class", "id");
-        id.innerHTML = obj[k];
-        createdTr.appendChild(id);
-      }
-    }
-    let action = document.createElement("td");
-    action.setAttribute("class", "action");
-    let iconUpdate = document.createElement("i");
-    iconUpdate.setAttribute("class", "fa-solid fa-pen update");
-    let iconDelete = document.createElement("i");
-    iconDelete.setAttribute("class", "fa-solid fa-trash delete");
-    action.appendChild(iconUpdate);
-    action.appendChild(iconDelete);
-    createdTr.appendChild(action);
-    targetTable.appendChild(createdTr);
-  }
-};
-const displayPaginationUser = function (
-  ourData,
-  currentPage,
-  itemsPerPage,
-  targetTable
-) {
-  targetTable.innerText = "";
-  let start = (currentPage - 1) * itemsPerPage;
-  let end = currentPage * itemsPerPage;
-  let paginationArray = ourData.slice(start, end);
-
-  for (let obj of paginationArray) {
-    let createdTr = document.createElement("tr");
-    // for loop to obj
-    for (let k in obj) {
-      if (k == "name"|| k == "Email" || k == "role" ) {
-        let createdTd = document.createElement("td");
-        createdTd.innerText = obj[k];
-        createdTr.appendChild(createdTd);
-      } else if (k == "id") {
-        let id = document.createElement("td");
-        id.setAttribute("class", "id");
-        id.innerHTML = obj[k];
-        createdTr.appendChild(id);
-      }
-    }
-    let action = document.createElement("td");
-    action.setAttribute("class", "action");
-    let iconUpdate = document.createElement("i");
-    iconUpdate.setAttribute("class", "fa-solid fa-pen update");
-    let iconDelete = document.createElement("i");
-    iconDelete.setAttribute("class", "fa-solid fa-trash delete");
-    action.appendChild(iconUpdate);
-    action.appendChild(iconDelete);
-    createdTr.appendChild(action);
-    targetTable.appendChild(createdTr);
-  }
-};
-
-
-
-
-
-
-
-
-
-
 
 //search
-const searchInputFuncForProbuct = function (
+const searchInputFunc = function (
   searchInput,
   targetTable,
-  ourData
+  ourData,
+  customer = []
 ) {
   let match = false;
   let noDataMatchDiv = document.querySelector(".massageNoData");
@@ -143,7 +60,7 @@ const searchInputFuncForProbuct = function (
       let createdTr = document.createElement("tr");
 
       for (let k in data) {
-        if (k == "name" || k == "price" || k == "category" || k == "inStock") {
+        if (customer.includes(k)) {
           let createdTd = document.createElement("td");
           createdTd.innerText = data[k];
           createdTr.appendChild(createdTd);
@@ -174,115 +91,9 @@ const searchInputFuncForProbuct = function (
     noDataMatchDiv.style.display = "block";
   } else {
     noDataMatchDiv.style.display = "none";
+    targetTable.style.display = '';
   }
 };
-const searchInputFuncForOrder = function (
-  searchInput,
-  targetTable,
-  ourData
-) {
-  let match = false;
-  let noDataMatchDiv = document.querySelector(".massageNoData");
-  targetTable.innerHTML = "";
-
-  for (let data of ourData) {
-    let rowString = Object.values(data).join(" ").toLowerCase();
-
-    if (rowString.includes(searchInput.toLowerCase())) {
-      let createdTr = document.createElement("tr");
-
-      for (let k in data) {
-        if (k == "product_id"|| k == "customer_email" || k == "product_count" || k == "total_price") {
-          let createdTd = document.createElement("td");
-          createdTd.innerText = data[k];
-          createdTr.appendChild(createdTd);
-        } else if (k == "id") {
-          let id = document.createElement("td");
-          id.setAttribute("class", "id");
-          id.innerHTML = data[k];
-          createdTr.appendChild(id);
-        }
-      }
-      let action = document.createElement("td");
-    action.setAttribute("class", "action");
-    let iconUpdate = document.createElement("i");
-    iconUpdate.setAttribute("class", "fa-solid fa-pen update");
-    let iconDelete = document.createElement("i");
-    iconDelete.setAttribute("class", "fa-solid fa-trash delete");
-    action.appendChild(iconUpdate);
-    action.appendChild(iconDelete);
-    createdTr.appendChild(action);
-    targetTable.appendChild(createdTr);
-      targetTable.appendChild(createdTr);
-      match = true;
-    }
-  }
-
-  if (!match) {
-    targetTable.style.display = "none";
-    noDataMatchDiv.style.display = "block";
-  } else {
-    noDataMatchDiv.style.display = "none";
-  }
-};
-const searchInputFuncForUser = function (
-  searchInput,
-  targetTable,
-  ourData
-) {
-  let match = false;
-  let noDataMatchDiv = document.querySelector(".massageNoData");
-  targetTable.innerHTML = "";
-
-  for (let data of ourData) {
-    let rowString = Object.values(data).join(" ").toLowerCase();
-
-    if (rowString.includes(searchInput.toLowerCase())) {
-      let createdTr = document.createElement("tr");
-
-      for (let k in data) {
-        if (k == "name"|| k == "Email" || k == "role" ) {
-          let createdTd = document.createElement("td");
-          createdTd.innerText = data[k];
-          createdTr.appendChild(createdTd);
-        } else if (k == "id") {
-          let id = document.createElement("td");
-          id.setAttribute("class", "id");
-          id.innerHTML = data[k];
-          createdTr.appendChild(id);
-        }
-      }
-      let action = document.createElement("td");
-    action.setAttribute("class", "action");
-    let iconUpdate = document.createElement("i");
-    iconUpdate.setAttribute("class", "fa-solid fa-pen update");
-    let iconDelete = document.createElement("i");
-    iconDelete.setAttribute("class", "fa-solid fa-trash delete");
-    action.appendChild(iconUpdate);
-    action.appendChild(iconDelete);
-    createdTr.appendChild(action);
-    targetTable.appendChild(createdTr);
-      targetTable.appendChild(createdTr);
-      match = true;
-    }
-  }
-
-  if (!match) {
-    targetTable.style.display = "none";
-    noDataMatchDiv.style.display = "block";
-  } else {
-    noDataMatchDiv.style.display = "none";
-  }
-};
-
-
-
-
-
-
-
-
-
 
 
 // button colors
@@ -297,11 +108,68 @@ const currentBtnColor = function (b) {
   b.style.color = "white";
 };
 //creation of move btns
+const creationBtns = function(moveBtn, ourData, itemsPerPage) {
+  let createdBtn = this.document.createElement("button");
+      createdBtn.textContent = "<";
+      moveBtn.appendChild(createdBtn);
+      for (let i = 0; i < Math.ceil(ourData.length / itemsPerPage); i++) {
+        createdBtn = this.document.createElement("button");
+        createdBtn.textContent = i + 1;
+        moveBtn.appendChild(createdBtn);
+      }
+      createdBtn = this.document.createElement("button");
+      createdBtn.textContent = ">";
+      moveBtn.appendChild(createdBtn);
 
+      
+}
 
 // btns validations
 
-
+const validationOfBtns = function(btns, ourData, itemsPerPage) {
+   for (let i = 0; i < Math.ceil(ourData.length / itemsPerPage); i++) {
+          btns[i + 1].addEventListener("click", function () {
+              currentPage = i + 1;
+              resetBtnColor(btns);
+              currentBtnColor(btns[i + 1]);
+              displayPagination(
+                  ourData,
+                  currentPage,
+                  itemsPerPage,
+                  targetTable,["name", "Email" ,"role" ]
+              );
+          });
+        }
+        btns[0].addEventListener("click", function () {
+          if (currentPage == 1) return;
+          currentPage -= 1;
+          resetBtnColor(btns);
+          currentBtnColor(btns[currentPage]);
+          displayPagination(
+              ourData,
+              currentPage,
+              itemsPerPage,
+              targetTable,["name", "Email" ,"role" ]
+          );
+        });
+        btns[Math.ceil(ourData.length / itemsPerPage) + 1].addEventListener(
+          "click",
+          function () {
+              if (currentPage == Math.ceil(ourData.length / itemsPerPage)) {
+                  return;
+              }
+              currentPage += 1;
+              resetBtnColor(btns);
+              currentBtnColor(btns[currentPage]);
+              displayPagination(
+                  ourData,
+                  currentPage,
+                  itemsPerPage,
+                  targetTable,["name", "Email" ,"role" ]
+              );
+          }
+        );
+}
 
 
 

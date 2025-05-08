@@ -1,0 +1,56 @@
+window.addEventListener("load", function () {
+  let targetTable = this.document.querySelector("table tbody");
+  let searchInput = this.document.querySelector("input");
+  let searchBtn = this.document.querySelector(".seerchBtn");
+  let moveBtn = this.document.querySelector(".buttons");
+  let currentPage = 1;
+  let itemsPerPage = 6;
+
+
+
+  let ourData = [];
+  let target = "dyson_home";
+  this.fetch("http://localhost:3000/orders").then((response) => {
+    response.json().then((data) => {
+      console.log(data);
+      for (let i of data) {
+        for (let k in i) {
+          if (k == "sellerUsername") {
+            if (i[k] == target) {
+                ourData.push(i);
+            }
+          }
+        }
+      }
+      originalData = [...ourData];
+      displayPagination(ourData, currentPage, itemsPerPage, targetTable, 
+        ["product_id","customer_email" ,"product_count", "total_price"]
+      );
+
+      //////////////////////////////////////////////
+      creationBtns (moveBtn, ourData, itemsPerPage)  
+
+
+      let btns = this.document.querySelectorAll(".buttons button");
+      // button click functions
+
+      validationOfBtns (btns, ourData, itemsPerPage)
+
+      searchBtn.addEventListener("click", function () {
+        if (searchInput.value.trim() == "") {
+          moveBtn.style.display = "block";
+          ourData = [...originalData];
+          displayPagination(ourData, currentPage, itemsPerPage, targetTable, 
+            ["product_id","customer_email" ,"product_count", "total_price"]
+          );
+        } else {
+          searchInputFunc(searchInput.value, targetTable, ourData,
+             ["product_id","customer_email" ,"product_count", "total_price"]);
+          moveBtn.style.display = "none";
+        }
+
+        searchInput.value = "";
+      });
+    });
+  });
+});
