@@ -58,17 +58,7 @@ let cencelproduct = document.getElementById("cencelproduct");
 let cart = document.getElementById("cart");
 let addproduct = document.getElementById("addproduct");
 
-// const showCart = function (x, y) {
-//   //edit (x,y)
-//   document.getElementById(x).style.display = "block";
-//   document.getElementById(y).style.display = "block";
-// };
 
-// const hideCart = function (x, y) {
-//   //edit (x,y)
-//   document.getElementById(x).style.display = "none";
-//   document.getElementById(y).style.display = "none";
-// };
 
 headerclose.addEventListener("click", function () {
   hideCart("cartOverlay", "cartModal");
@@ -82,10 +72,10 @@ cart.addEventListener("click", function () {
   showCart("cartOverlay", "cartModal");
 });
 
-// function hideCart() {
-//   document.getElementById("cartOverlay").style.display = "none";
-//   document.getElementById("cartModal").style.display = "none";
-// }
+
+let data=JSON.parse(sessionStorage.getItem("loginAdminUsername")).Username
+console.log(data)  
+
 
 function addProduct() {
   let productName = document.getElementById("productname").value;
@@ -95,7 +85,7 @@ function addProduct() {
   let image =
     document.getElementById("imgurl").files[0]?.name || "No file selected";
 
-  if (productName && category && price && description && image) {
+  if (productName && category && price && description && image != "No file selected") {
     let productData = {
       name: productName,
       description: description,
@@ -104,6 +94,8 @@ function addProduct() {
       inStock: "true",
       category: category,
       imageUrl: `../assets/images/${image}`,
+       sellerUsername:data,
+      approve:"true"
     };
     // console.log(productData["name"])
     // console.log(productData["filedata"])
@@ -119,13 +111,15 @@ function addProduct() {
       .then((data) => console.log("Product Added:", data))
       .catch((error) => console.error("Error:", error));
 
+      location.reload()
+
     // console.log(productData);
 
     // console.log(
     //   `Product Added:\nName: ${productName}\nCategory: ${category}\nDescription: ${description}\nPrice: $${price}\nImage: ${image}`
     // );
 
-    hideCart();
+    hideCart("cartOverlay", "cartModal");
   } else {
     alert("Please fill in all required fields!");
   }
