@@ -346,3 +346,6 @@ body {
     font-size: 1.3rem;
   }
 }
+#id{
+  display: none;
+}
