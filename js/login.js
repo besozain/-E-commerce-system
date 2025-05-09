@@ -62,7 +62,7 @@ submit.addEventListener('click',function(){
                 if(matchingUser.role=='customer'){
                     loginUsername = matchingUser
                     sessionStorage.setItem('loginCustomerUsername', JSON.stringify(loginUsername))
-                    window.location.href = "home.html";
+                    window.location.href = "../index.html";
 
                 }else if(matchingUser.role=='seller'){
 
