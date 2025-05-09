@@ -346,13 +346,3 @@ body {
     font-size: 1.3rem;
   }
 }
-.cart {
-  height: 70vh;
-  max-width: 700px;
-  width: 90%;
-  margin: auto;
-  margin-top: 20px;
-  border-radius: 20px;
-  box-shadow: 1px 1px 10px rgba(38, 88, 80, 0.497);
-  background-color: white;
-}

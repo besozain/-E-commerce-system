@@ -4,7 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>TechHub</title>
-  <link rel="stylesheet" href="../css/index.css" />
+  <link rel="stylesheet" href="../css/card.css" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
   <!-- Header -->
@@ -13,12 +14,57 @@
   </header>
   <div class="space"></div>
 
-  <div class="cart">
+      <div class="product-container">
+        <div class="product-gallery">
+            <div class="main-image">
+                <img src="https://via.placeholder.com/600" alt="Main product image">
+            </div>
+        </div>
+        
+        <div class="product-details">
+            <h1 class="product-title">Smart Watch - Model 2023</h1>
+            <div class="product-rating">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <span class="review-count">(42 reviews)</span>
+            </div>
+            
+            <div class="product-price">
+                <span class="current-price">$599</span>
+            </div>
+            
+            <div class="product-description">
+                <h3>Product Description</h3>
+                <p>Advanced smartwatch with 1.4-inch AMOLED display, water resistant up to 50 meters, battery life up to 14 days, compatible with both iOS and Android systems.</p>
+            </div>
+            
+            <div class="product-options">
+                <h4>Quantity</h4>
+                <div class="quantity-selector">
+                    <button class="qty-btn">-</button>
+                    <span class="qty">1</span>
+                    <button class="qty-btn">+</button>
+                </div>
+            </div>
+            
+            <div class="product-actions">
+                <button class="add-to-cart">
+                    <i class="fas fa-shopping-cart"></i>
+                    Add to Cart
+                </button>
+            </div>
+        </div>
+    </div>
     
   </div>
   <!-- View More Button -->
   <div class="view-more-container">
-    <a href="../html/Product.html" class="view-more-btn">View All Products</a>
+    <a href="products.html" class="view-more-btn">View All Products</a>
   </div>
 
 </body>
