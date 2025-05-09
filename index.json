@@ -295,6 +295,62 @@
       "imageUrl": "../assets/images/R.jpeg",
       "sellerUsername": "basmazain",
       "approve": "false"
+    },
+    {
+      "id": "9c1f",
+      "customer_email": "am111@gmail.com",
+      "customer_user_name": "ameria",
+      "product_name": "Nintendo Switch OLED",
+      "product_count": "1",
+      "total_price": "349",
+      "currency": "EGP",
+      "order_date": "2025-05-09T22:45:54.593Z",
+      "shipping_address": "789 Desert Rd,Riyadh,KSA",
+      "payment_method": "paypal",
+      "order_status": "processing",
+      "sellerUsername": "basmazain"
+    },
+    {
+      "id": "cea5",
+      "customer_email": "am111@gmail.com",
+      "customer_user_name": "ameria",
+      "product_name": "Samsung Galaxy S23 Ultra",
+      "product_count": "1",
+      "total_price": "1199",
+      "currency": "EGP",
+      "order_date": "2025-05-09T22:50:19.292Z",
+      "shipping_address": "789 Desert Rd,Riyadh,KSA",
+      "payment_method": "paypal",
+      "order_status": "processing",
+      "sellerUsername": "samsung_official"
+    },
+    {
+      "id": "10a4",
+      "customer_email": "am111@gmail.com",
+      "customer_user_name": "ameria",
+      "product_name": "GoPro Hero 12 Black",
+      "product_count": "1",
+      "total_price": "399",
+      "currency": "EGP",
+      "order_date": "2025-05-09T22:50:46.664Z",
+      "shipping_address": "789 Desert Rd,Riyadh,KSA",
+      "payment_method": "paypal",
+      "order_status": "processing",
+      "sellerUsername": "gopro_adventures"
+    },
+    {
+      "id": "e2af",
+      "customer_email": "am111@gmail.com",
+      "customer_user_name": "ameria",
+      "product_name": "dell 13",
+      "product_count": "1",
+      "total_price": "200000",
+      "currency": "EGP",
+      "order_date": "2025-05-09T22:51:28.860Z",
+      "shipping_address": "789 Desert Rd,Riyadh,KSA",
+      "payment_method": "paypal",
+      "order_status": "processing",
+      "sellerUsername": "basmazain"
     }
   ],
   "orders": [
