@@ -8,6 +8,8 @@ let submit =document.getElementById("submit")
 
 let signUp=document.getElementById('sign-up')
 
+let loginUsername;
+
 email.addEventListener("blur",function(){
     const pattern =  /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     validateInput(this,erroremail,pattern);
@@ -58,10 +60,19 @@ submit.addEventListener('click',function(){
 
                 // window.location.href = "sellerDashboard.html";
                 if(matchingUser.role=='customer'){
+                    loginUsername = matchingUser
+                    sessionStorage.setItem('loginCustomerUsername', JSON.stringify(loginUsername))
                     window.location.href = "home.html";
+
                 }else if(matchingUser.role=='seller'){
+
+                    loginUsername = matchingUser
+                    sessionStorage.setItem('loginSellerUsername', JSON.stringify(loginUsername))
                     window.location.href = "sellerDashboard.html";
                 }else if(matchingUser.role=='admin'){
+
+                    loginUsername = matchingUser
+                    sessionStorage.setItem('loginAdminUsername', JSON.stringify(loginUsername))
                     window.location.href = "adminDashboard.html";
                 }
                

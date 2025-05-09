@@ -6,7 +6,6 @@ const displayPagination = function (
   itemsPerPage,
   targetTable,
   customer = []
-
 ) {
   targetTable.innerText = "";
   let start = (currentPage - 1) * itemsPerPage;
@@ -72,15 +71,15 @@ const searchInputFunc = function (
         }
       }
       let action = document.createElement("td");
-    action.setAttribute("class", "action");
-    let iconUpdate = document.createElement("i");
-    iconUpdate.setAttribute("class", "fa-solid fa-pen update");
-    let iconDelete = document.createElement("i");
-    iconDelete.setAttribute("class", "fa-solid fa-trash delete");
-    action.appendChild(iconUpdate);
-    action.appendChild(iconDelete);
-    createdTr.appendChild(action);
-    targetTable.appendChild(createdTr);
+      action.setAttribute("class", "action");
+      let iconUpdate = document.createElement("i");
+      iconUpdate.setAttribute("class", "fa-solid fa-pen update");
+      let iconDelete = document.createElement("i");
+      iconDelete.setAttribute("class", "fa-solid fa-trash delete");
+      action.appendChild(iconUpdate);
+      action.appendChild(iconDelete);
+      createdTr.appendChild(action);
+      targetTable.appendChild(createdTr);
       targetTable.appendChild(createdTr);
       match = true;
     }
@@ -91,10 +90,9 @@ const searchInputFunc = function (
     noDataMatchDiv.style.display = "block";
   } else {
     noDataMatchDiv.style.display = "none";
-    targetTable.style.display = '';
+    targetTable.style.display = "";
   }
 };
-
 
 // button colors
 const resetBtnColor = function (btns) {
@@ -108,75 +106,120 @@ const currentBtnColor = function (b) {
   b.style.color = "white";
 };
 //creation of move btns
-const creationBtns = function(moveBtn, ourData, itemsPerPage) {
+const creationBtns = function (moveBtn, ourData, itemsPerPage) {
   let createdBtn = this.document.createElement("button");
-      createdBtn.textContent = "<";
-      moveBtn.appendChild(createdBtn);
-      for (let i = 0; i < Math.ceil(ourData.length / itemsPerPage); i++) {
-        createdBtn = this.document.createElement("button");
-        createdBtn.textContent = i + 1;
-        moveBtn.appendChild(createdBtn);
-      }
-      createdBtn = this.document.createElement("button");
-      createdBtn.textContent = ">";
-      moveBtn.appendChild(createdBtn);
-
-      
-}
+  createdBtn.textContent = "<";
+  moveBtn.appendChild(createdBtn);
+  for (let i = 0; i < Math.ceil(ourData.length / itemsPerPage); i++) {
+    createdBtn = this.document.createElement("button");
+    createdBtn.textContent = i + 1;
+    moveBtn.appendChild(createdBtn);
+  }
+  createdBtn = this.document.createElement("button");
+  createdBtn.textContent = ">";
+  moveBtn.appendChild(createdBtn);
+};
 
 // btns validations
 
-const validationOfBtns = function(btns, ourData, itemsPerPage) {
-   for (let i = 0; i < Math.ceil(ourData.length / itemsPerPage); i++) {
-          btns[i + 1].addEventListener("click", function () {
-              currentPage = i + 1;
-              resetBtnColor(btns);
-              currentBtnColor(btns[i + 1]);
-              displayPagination(
-                  ourData,
-                  currentPage,
-                  itemsPerPage,
-                  targetTable,["name", "Email" ,"role" ]
-              );
-          });
-        }
-        btns[0].addEventListener("click", function () {
-          if (currentPage == 1) return;
-          currentPage -= 1;
-          resetBtnColor(btns);
-          currentBtnColor(btns[currentPage]);
-          displayPagination(
-              ourData,
-              currentPage,
-              itemsPerPage,
-              targetTable,["name", "Email" ,"role" ]
-          );
-        });
-        btns[Math.ceil(ourData.length / itemsPerPage) + 1].addEventListener(
-          "click",
-          function () {
-              if (currentPage == Math.ceil(ourData.length / itemsPerPage)) {
-                  return;
-              }
-              currentPage += 1;
-              resetBtnColor(btns);
-              currentBtnColor(btns[currentPage]);
-              displayPagination(
-                  ourData,
-                  currentPage,
-                  itemsPerPage,
-                  targetTable,["name", "Email" ,"role" ]
-              );
+const validationOfBtns = function (
+  btns,
+  ourData,
+  itemsPerPage,
+  targetTable,
+  customer = []
+) {
+  for (let i = 0; i < Math.ceil(ourData.length / itemsPerPage); i++) {
+    btns[i + 1].addEventListener("click", function () {
+      currentPage = i + 1;
+      resetBtnColor(btns);
+      currentBtnColor(btns[i + 1]);
+      displayPagination(
+        ourData,
+        currentPage,
+        itemsPerPage,
+        targetTable,
+        customer
+      );
+    });
+  }
+  btns[0].addEventListener("click", function () {
+    if (currentPage == 1) return;
+    currentPage -= 1;
+    resetBtnColor(btns);
+    currentBtnColor(btns[currentPage]);
+    displayPagination(
+      ourData,
+      currentPage,
+      itemsPerPage,
+      targetTable,
+      customer
+    );
+  });
+  btns[Math.ceil(ourData.length / itemsPerPage) + 1].addEventListener(
+    "click",
+    function () {
+      if (currentPage == Math.ceil(ourData.length / itemsPerPage)) {
+        return;
+      }
+      currentPage += 1;
+      resetBtnColor(btns);
+      currentBtnColor(btns[currentPage]);
+      displayPagination(
+        ourData,
+        currentPage,
+        itemsPerPage,
+        targetTable,
+        customer
+      );
+    }
+  );
+};
+
+const statusOfSeller = function () {
+  this.fetch("http://localhost:3000/orders").then((response) => {
+    response.json().then((data) => {
+      let orderCount = this.document.querySelectorAll(".stat-card p")[1];
+      let order_count_array = [];
+      console.log(data);
+      let target = JSON.parse(
+        this.sessionStorage.getItem("loginSellerUsername")
+      ).Username;
+      for (let i of data) {
+        for (let k in i) {
+          if (k == "sellerUsername") {
+            if (i[k] == target) {
+              order_count_array.push(i);
+            }
           }
-        );
-}
+        }
+      }
 
+      orderCount.innerHTML = order_count_array.length;
+    });
+  });
+};
 
-
-
-
-
-
+this.fetch("http://localhost:3000/products").then((response) => {
+  response.json().then((data) => {
+    let productCount = this.document.querySelectorAll(".stat-card p")[0];
+    let product_count_array = [];
+    console.log(data);
+    let target = JSON.parse(
+      this.sessionStorage.getItem("loginSellerUsername")
+    ).Username;
+    for (let i of data) {
+      for (let k in i) {
+        if (k == "sellerUsername") {
+          if (i[k] == target) {
+            product_count_array.push(i);
+          }
+        }
+      }
+    }
+    productCount.innerHTML = product_count_array.length;
+  });
+});
 
 // /////////////////////////////////////////////////////////////////////////////////
 // let headerclose = document.getElementById("headerclose");
@@ -314,8 +357,6 @@ const hideCart = function (x, y) {
 //           console.log(productnameupdate);
 //           showCart("cartOverlayupdate", "cartModalupdate");
 
-         
-
 //           productupdate.addEventListener("click", function () {
 
 //             let productData = {
@@ -328,7 +369,6 @@ const hideCart = function (x, y) {
 //               imageUrl: `../assets/images/${imgurlupdate}`,
 //             };
 //             console.log("por",productData)
-
 
 //             fetch(`http://localhost:3000/products/${valuetarget}`, {
 //               method: "PATCH",
@@ -348,16 +388,15 @@ const hideCart = function (x, y) {
 //       productdelete.addEventListener("click", function () {
 //         fetch(`http://localhost:3000/products/${valuetarget}`, {
 //           method: "DELETE",
-          
+
 //         })
-          
+
 //           .then((data) => console.log("delete successfilly....", data))
 //           .catch((error) => console.error("delete not complete", error));
 //           parentTr.remove();
 
 //       });
 
-     
 //     }
 //   }
 // });

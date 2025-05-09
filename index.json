@@ -56,7 +56,7 @@
       "inStock": true,
       "category": "Smartphones",
       "imageUrl": "https://example.com/iphone15.jpg",
-      "sellerUsername": "apple_store"
+      "sellerUsername": "basmazain"
     },
     {
       "id": "2",
@@ -78,7 +78,7 @@
       "inStock": false,
       "category": "Gaming",
       "imageUrl": "https://example.com/ps5.jpg",
-      "sellerUsername": "sony_gaming"
+      "sellerUsername": "basmazain"
     },
     {
       "id": "4",
@@ -100,7 +100,7 @@
       "inStock": true,
       "category": "Gaming",
       "imageUrl": "https://example.com/switch.jpg",
-      "sellerUsername": "nintendo_shop"
+      "sellerUsername": "basmazain"
     },
     {
       "id": "6",
@@ -111,7 +111,7 @@
       "inStock": true,
       "category": "Audio",
       "imageUrl": "https://example.com/boseqc45.jpg",
-      "sellerUsername": "bose_audio"
+      "sellerUsername":"basmazain"
     },
     {
       "id": "7",
@@ -133,7 +133,7 @@
       "inStock": true,
       "category": "Toys",
       "imageUrl": "https://example.com/legoat.jpg",
-      "sellerUsername": "lego_creations"
+      "sellerUsername": "basmazain"
     },
     {
       "id": "9",
@@ -166,7 +166,7 @@
       "inStock": true,
       "category": "Audio",
       "imageUrl": "https://example.com/sonyxm5.jpg",
-      "sellerUsername": "sony_audio"
+      "sellerUsername": "basmazain"
     },
     {
       "id": "12",
@@ -210,7 +210,7 @@
       "inStock": true,
       "category": "Computer",
       "imageUrl": "https://example.com/mxkeys.jpg",
-      "sellerUsername": "dyson_home"
+      "sellerUsername": "basmazain"
     },
     {
       "id": "16",
@@ -254,7 +254,7 @@
       "inStock": true,
       "category": "Kitchen",
       "imageUrl": "https://example.com/breville.jpg",
-      "sellerUsername": "dyson_home"
+      "sellerUsername": "basmazain"
     },
     {
       "id": "20",
@@ -284,7 +284,7 @@
     "shipping_address": "123 Nile St, Cairo, Egypt",
     "payment_method": "credit_card",
     "order_status": "delivered",
-    "sellerUsername": "apple_authorized"
+    "sellerUsername": "basmazain"
   },
   {
     "id": "a99d",
@@ -300,7 +300,7 @@
     "shipping_address": "456 Palm Ave, Dubai, UAE",
     "payment_method": "paypal",
     "order_status": "shipped",
-    "sellerUsername": "dyson_home"
+    "sellerUsername": "basmazain"
   },
   {
     "id": "2890",
@@ -316,7 +316,7 @@
     "shipping_address": "789 Desert Rd, Riyadh, KSA",
     "payment_method": "credit_card",
     "order_status": "processing",
-    "sellerUsername": "sony_me"
+    "sellerUsername": "basmazain"
   },
   {
     "id": "937b",
@@ -332,7 +332,7 @@
     "shipping_address": "321 Garden St, Beirut, Lebanon",
     "payment_method": "apple_pay",
     "order_status": "delivered",
-    "sellerUsername": "dyson_home"
+    "sellerUsername":"basmazain"
   },
   {
     "id": "3473",
@@ -380,7 +380,7 @@
     "shipping_address": "321 Garden St, Beirut, Lebanon",
     "payment_method": "credit_card",
     "order_status": "delivered",
-    "sellerUsername": "dyson_home"
+    "sellerUsername": "basmazain"
   },
   {
     "id": "b3a1",

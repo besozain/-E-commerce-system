@@ -9,10 +9,11 @@ window.addEventListener("load", function () {
 
 
   let ourData = [];
-  let target = "dyson_home";
+  
   this.fetch("http://localhost:3000/orders").then((response) => {
     response.json().then((data) => {
       console.log(data);
+      let target = JSON.parse(this.sessionStorage.getItem('loginSellerUsername')).Username;
       for (let i of data) {
         for (let k in i) {
           if (k == "sellerUsername") {
@@ -34,7 +35,7 @@ window.addEventListener("load", function () {
       let btns = this.document.querySelectorAll(".buttons button");
       // button click functions
 
-      validationOfBtns (btns, ourData, itemsPerPage)
+      validationOfBtns (btns, ourData, itemsPerPage,targetTable,["product_id","customer_email" ,"product_count", "total_price"])
 
       searchBtn.addEventListener("click", function () {
         if (searchInput.value.trim() == "") {
@@ -53,4 +54,5 @@ window.addEventListener("load", function () {
       });
     });
   });
+  statusOfSeller()
 });

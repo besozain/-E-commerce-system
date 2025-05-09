@@ -6,17 +6,18 @@ window.addEventListener("load", function () {
   let currentPage = 1;
   let itemsPerPage = 6;
 
-
   let ourData = [];
-  let target = "dyson_home";
+ 
   this.fetch("http://localhost:3000/products").then((response) => {
     response.json().then((data) => {
       console.log(data);
+      let target = JSON.parse(this.sessionStorage.getItem('loginSellerUsername')).Username;
+      console.log(target)
       for (let i of data) {
         for (let k in i) {
           if (k == "sellerUsername") {
             if (i[k] == target) {
-                ourData.push(i);
+              ourData.push(i);
             }
           }
         }
@@ -28,12 +29,12 @@ window.addEventListener("load", function () {
         "inStock",
       ]);
 
-      creationBtns (moveBtn, ourData, itemsPerPage)  
+      creationBtns(moveBtn, ourData, itemsPerPage);
 
       let btns = this.document.querySelectorAll(".buttons button");
       // button click functions
 
-      validationOfBtns (btns, ourData, itemsPerPage)
+      validationOfBtns(btns, ourData, itemsPerPage,targetTable,["name", "price", "category", "inStock"]);
 
       searchBtn.addEventListener("click", function () {
         if (searchInput.value.trim() == "") {
@@ -58,4 +59,7 @@ window.addEventListener("load", function () {
       });
     });
   });
+
+  statusOfSeller()
 });
+

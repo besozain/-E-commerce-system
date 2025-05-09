@@ -26,7 +26,7 @@ window.addEventListener('load', function () {
     let btns = this.document.querySelectorAll(".buttons button");
     // button click functions
 
-        validationOfBtns (btns, ourData, itemsPerPage)
+        validationOfBtns (btns, ourData, itemsPerPage,targetTable,["name" ,"price" , "category" , "inStock"])
       
 
     // search
