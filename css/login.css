@@ -9,10 +9,12 @@ body {
     display: grid;
     height: 100vh;
     place-items: center;
+    background-color: #DEF3F0;
       
 }
 main {
     text-align: center;
+    background-color: white;
     border-radius: 20px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
