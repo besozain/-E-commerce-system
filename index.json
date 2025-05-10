@@ -3,8 +3,8 @@
     {
       "id": "81c1",
       "name": "hager",
-      "Email": "ha136@gmail.com",
-      "Username": "haywe",
+      "Email": "sara@gmail.com",
+      "Username": "sara",
       "Password": "Moh&hag9501",
       "Phone": "01094452071",
       "role": "customer"
@@ -12,38 +12,47 @@
     {
       "id": "3108",
       "name": "hager",
-      "Email": "ha13166@gmail.com",
-      "Username": "haywe",
+      "Email": "hagermohamed@gmail.com",
+      "Username": "hasli",
       "Password": "Moh&hag9501",
-      "Phone": "01094452071",
+      "Phone": "01092582071",
       "role": "admin"
     },
     {
-      "id": "3108",
+      "id": "3258",
       "name": "ameria",
-      "Email": "am11851@gmail.com",
-      "Username": "amujeria",
+      "Email": "amira@gmail.com",
+      "Username": "amria",
       "Password": "Moh@hag9501",
-      "Phone": "01026619459",
+      "Phone": "01085619459",
       "role": "customer"
     },
     {
-      "id": "3108",
+      "id": "3968",
       "name": "ameria",
-      "Email": "am11631@gmail.com",
-      "Username": "ahjmeria",
+      "Email": "ahmed11631@gmail.com",
+      "Username": "ahmed",
       "Password": "Moh@hag9501",
-      "Phone": "01026619459",
+      "Phone": "01026253459",
       "role": "customer"
     },
     {
       "id": "1660",
       "name": "hager",
-      "Email": "ha13166@gmail.com",
+      "Email": "hajkde@gmail.com",
       "Username": "haywe",
       "Password": "Moh&hag9501",
-      "Phone": "01094452071",
+      "Phone": "01094582071",
       "role": "customer"
+    },
+    {
+      "id": "1685",
+      "name": "hager",
+      "Email": "hagerr@gmail.com",
+      "Username": "hager",
+      "Password": "Moh&hag9501",
+      "Phone": "01094452071",
+      "role": "seller"
     }
   ],
   "products": [
@@ -56,56 +65,8 @@
       "inStock": "true",
       "category": "Cameras",
       "imageUrl": "https://example.com/canonr5.jpg",
-      "sellerUsername": "canon_pro",
-      "approve": "true"
-    },
-    {
-      "id": "19",
-      "name": "Breville Barista Pro",
-      "description": "Espresso machine with built-in grinder",
-      "price": "899",
-      "currency": "USD",
-      "inStock": "true",
-      "category": "Kitchen",
-      "imageUrl": "https://example.com/breville.jpg",
-      "sellerUsername": "basmazain",
-      "approve": "false"
-    },
-    {
-      "id": "20",
-      "name": "Meta Quest 3",
-      "description": "128GB VR headset with mixed reality",
-      "price": "499",
-      "currency": "USD",
-      "inStock": "true",
-      "category": "VR",
-      "imageUrl": "https://example.com/quest3.jpg",
-      "sellerUsername": "meta_store",
-      "approve": "false"
-    },
-    {
-      "id": "d972",
-      "name": "Samsung Galaxy S23",
-      "description": "klkjlkj",
-      "price": "200000",
-      "currency": "EGP",
-      "inStock": "false",
-      "category": "mobile",
-      "imageUrl": "../assets/images/Dell-Sept-14.jpg",
       "sellerUsername": "hager",
       "approve": "true"
-    },
-    {
-      "id": "93dd",
-      "name": "dell 13",
-      "description": "lkjljljoijo",
-      "price": "200000",
-      "currency": "EGP",
-      "inStock": "true",
-      "category": "laptop",
-      "imageUrl": "../assets/images/R.jpeg",
-      "sellerUsername": "basmazain",
-      "approve": "false"
     }
   ],
   "orders": [
