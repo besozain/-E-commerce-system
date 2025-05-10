@@ -148,6 +148,48 @@ targetTable.addEventListener("click", function (e) {
   // console.log(this)
   // console.log(e.target)
   let check = e.target;
+  
+  if(check.classList.contains("checkaprove")){
+    check.addEventListener("change",function(){
+         let parentTr = check.closest("tr");
+    let idtarget = parentTr.querySelector("td");
+    let tdtotaltarget= parentTr.querySelectorAll("td");
+    let x;
+
+    let valuetarget = idtarget.textContent;
+       if(check.checked){
+         x="true"
+
+
+      }else{
+        x="false"
+
+      }
+
+   let productData= {
+    approve:x
+
+    }
+
+     fetch(`http://localhost:3000/products/${valuetarget}`, {
+              method: "PATCH",
+              body: JSON.stringify(productData),
+            })
+              // .then(response => response.json())
+              .then((data) => console.log("modify successfilly....", data))
+              .catch((error) => console.error("modify not complete", error));
+
+
+  
+
+
+    
+     
+
+    })
+
+  }
+
 
   if (
     check.classList.contains("update") ||
@@ -158,10 +200,7 @@ targetTable.addEventListener("click", function (e) {
     let idtarget = parentTr.querySelector("td");
     let tdtotaltarget= parentTr.querySelectorAll("td");
 
-    // console.log(tdtotaltarget[0])
-    // console.log(idtarget);
 
-    // console.log(idtarget.textContent);
     let valuetarget = idtarget.textContent;
 
     if (check.classList.contains("update")) {
@@ -175,13 +214,10 @@ targetTable.addEventListener("click", function (e) {
           productnameupdate.value = matchingUser.name;
           priceupdate.value = Number(matchingUser.price);
 
-          // window.addEventListener("DomContentLoad",function(){        //////////edit
-          //   console.log(matchingUser.category)
-          //   categoryupdate.value=matchingUser.category
-          // })
+      
 
           descriptionupdate.value = matchingUser.description;
-          imgurlupdate = matchingUser.imageUrl; ///edit
+          imgurlupdate = matchingUser.imageUrl; 
 
           console.log(productnameupdate);
           showCart("cartOverlayupdate", "cartModalupdate");
@@ -214,17 +250,17 @@ targetTable.addEventListener("click", function (e) {
 
                 }
 
-                // console.log(tdtotaltarget[i].textContent)
+                
             }
 
            console.log(`productData=${productData}`)
-            // let userId = 5; // ID of the user to modify
+          
 
             fetch(`http://localhost:3000/products/${valuetarget}`, {
               method: "PATCH",
               body: JSON.stringify(productData),
             })
-              // .then(response => response.json())
+             
               .then((data) => console.log("modify successfilly....", data))
               .catch((error) => console.error("modify not complete", error));
           });

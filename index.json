@@ -3,7 +3,7 @@
     {
       "id": "81c1",
       "name": "hager",
-      "Email": "ha13166@gmail.com",
+      "Email": "ha136@gmail.com",
       "Username": "haywe",
       "Password": "Moh&hag9501",
       "Phone": "01094452071",
@@ -57,7 +57,7 @@
       "category": "Cameras",
       "imageUrl": "https://example.com/canonr5.jpg",
       "sellerUsername": "canon_pro",
-      "approve": "false"
+      "approve": "true"
     },
     {
       "id": "19",
