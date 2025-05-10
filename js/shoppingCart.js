@@ -179,6 +179,19 @@ window.addEventListener("load", function () {
               });
           });
         });
+
+        let payment = this.document.querySelector('.payment')
+        payment.addEventListener('click', function() {
+          document.querySelector('.customAlert').style.display = "block"
+          let confirmBtn = document.querySelector('.confirmBtn')
+          let cancelBtn = document.querySelector('.cancelBtn')
+          confirmBtn.addEventListener('click' ,function() {
+            icon.remove()
+            itemQuantity.remove()
+            
+          })
+
+        })
       }
 
       // create price section

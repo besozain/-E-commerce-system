@@ -19,8 +19,14 @@
       <div class="cart-items">
       </div>
 
+            <!-- Uncomment to show empty state -->
+      <div class="empty-cart">
+        <i class="fas fa-shopping-cart"></i>
+        <h3>Your cart is empty</h3>
+        <p>Start shopping to add items</p>
+      </div>
 
-        <button class="checkout-btn">
+        <button class="checkout-btn payment">
           <i class="fas fa-lock"></i>
           Proceed to Checkout
         </button>
@@ -32,12 +38,6 @@
         </button>
       </div>
 
-      <!-- Uncomment to show empty state -->
-      <div class="empty-cart">
-            <i class="fas fa-shopping-cart"></i>
-            <h3>Your cart is empty</h3>
-            <p>Start shopping to add items</p>
-        </div>
     </div>
 
     <!-- delete sweat card -->
@@ -51,6 +51,21 @@
        </footer>
 
      </div>
+
+
+     <!-- payment sweat alert  -->
+
+  <div class="customAlert">
+  <div class="alertContent">
+    <div class="success-icon">✓</div>
+    <h3>Order Received Successfully!</h3>
+    <p>Order #<span id="orderId">12345</span> has been delivered.</p>
+    <div class="alertBtns">
+      <button class="btn confirmBtn">Track Order</button>
+      <button class="btn cancelBtn">Close</button>
+    </div>
+  </div>
+</div>
 
     <script src="../js/shoppingCart.js"></script>
   </body>

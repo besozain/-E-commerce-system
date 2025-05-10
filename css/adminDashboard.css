@@ -2,6 +2,7 @@ body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f9fafb;
+    box-sizing: border-box;
 }
 
 .dashboard {
@@ -56,6 +57,7 @@ body {
     display: flex;
     align-items: center;
     gap: 10px;
+    position: relative;
 }
 
 .admin-info img {
@@ -63,6 +65,27 @@ body {
     height: 40px;
     border-radius: 50%;
 }
+.logOut {
+    position: absolute;
+    right: 21px;
+    top: 38px;
+    padding: 11px;
+    width: 100px;
+    height:28px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.45);
+    display: none;
+}
+.logOut:hover{
+    background-color: #55555523;
+    cursor: pointer;
+}
+.admin-info:hover .logOut{
+    display: block;
+}
+
+
 
 .stats {
     display: grid;
