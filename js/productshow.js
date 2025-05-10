@@ -220,7 +220,7 @@ let parentElem = check.parentElement;
   .then((response) => response.json())
   .then((user) => {
 
-    const productmatch = user.find(u=>u.id ===productmatch);
+    const productmatch = user.find(u=>u.id ===children[4].textContent);
     console.log(productmatch)
 
   })
