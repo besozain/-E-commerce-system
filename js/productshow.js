@@ -114,7 +114,7 @@ let parentElem = check.parentElement;
     order_date:new Date(),
     shipping_address:"789 Desert Rd,Riyadh,KSA",
     payment_method:"paypal",
-    order_status:"processing",
+    order_status:"",
     sellerUsername:children[5].textContent 
   }
 
@@ -220,7 +220,7 @@ let parentElem = check.parentElement;
   .then((response) => response.json())
   .then((user) => {
 
-    const productmatch = user.find(u=>u.id ===children[4].textContent);
+    const productmatch = user.find(u=>u.id ===productmatch);
     console.log(productmatch)
 
   })
