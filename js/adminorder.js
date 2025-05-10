@@ -48,4 +48,14 @@ window.addEventListener('load', function () {
 })
 
 
+/////////////////////
+//LOG OUT 
+window.addEventListener('load' , function() {
+  let logOutBtn = this.document.querySelector('.logOut')
+  console.log(logOutBtn)
+  logOutBtn.addEventListener("click", function(){
+    sessionStorage.removeItem("loginAdminUsername")
+    window.location.href = "../index.html";
+  })
 
+})

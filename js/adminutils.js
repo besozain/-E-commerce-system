@@ -27,6 +27,16 @@ const displayPagination = function (
         id.innerHTML = obj[k];
         createdTr.appendChild(id);
       }
+      if (k == "approve") {
+        let createdTd = document.createElement("td");
+        let checkbox = document.createElement("input");
+        checkbox.setAttribute("type", "checkbox"); 
+        if(obj[k] == "true"){
+          checkbox.checked = true
+        }
+        createdTd.appendChild(checkbox);
+        createdTr.appendChild(createdTd);
+      }
     }
     let action = document.createElement("td");
     action.setAttribute("class", "action");

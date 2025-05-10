@@ -23,7 +23,35 @@ body {
   z-index: 999;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
-
+.targetLI {
+  position: relative;
+}
+#header img {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+.logOut {
+    position: absolute;
+    right: 15px;
+    top: 25px;
+    padding: 11px;
+    width: 100px;
+    height:48px;
+    background-color: #ffffff;
+    color: black;
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.45);
+    display: none;
+}
+.logOut:hover{
+    background-color: #262626e4;
+    color: white;
+    cursor: pointer;
+}
+.targetLI:hover .logOut{
+    display: block;
+}
 
 #header h1 {
   font-size: 1.8rem;

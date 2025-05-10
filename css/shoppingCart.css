@@ -289,21 +289,36 @@ body {
   margin-bottom: 15px;
 }
 
-.alertBtns {
+
+/* track the order */
+
+.track {
+
+  color: rgba(0, 0, 0, 0.639);
   display: flex;
-  gap: 15px;
   justify-content: center;
-  margin-top: 25px;
+  align-items: center;
+  gap: 20px;
 }
-
-.confirmBtn {
-  background-color: #006354;
-  color: white;
+ 
+.trackArrow{
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.203);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to left, rgba(128, 128, 128, 0.247) 50%, white 50%);
+  background-size: 200% 100%;
+  background-position: right;
+  transition: background-position 0.5s ease;
 }
-
-.cancelBtn {
-  background-color: #f44336;
-  color: white;
+.trackArrow:hover{
+    background-position: left;
+    cursor: pointer;
 }
-
+.trackArrow i {
+  font-size: 30px;
+}
 

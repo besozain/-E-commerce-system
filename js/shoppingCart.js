@@ -6,11 +6,16 @@ window.addEventListener("load", function () {
       let empty = document.querySelector(".empty-cart");
       let totalPrice = 0;
 
-      let customer =  JSON.parse(this.sessionStorage.getItem('loginCustomerUsername')).Username;
-      console.log()
+      let customer = JSON.parse(
+        this.sessionStorage.getItem("loginCustomerUsername")
+      ).Username;
+      console.log();
       let result = [];
 
-      result = data.filter((item) => item.customer_user_name === customer);
+      result = data.filter(
+        (item) =>
+          item.customer_user_name === customer && item.order_status.trim() == ""
+      );
 
       if (result.length == 0) {
         empty.style.display = "block";
@@ -180,18 +185,26 @@ window.addEventListener("load", function () {
           });
         });
 
-        let payment = this.document.querySelector('.payment')
-        payment.addEventListener('click', function() {
-          document.querySelector('.customAlert').style.display = "block"
-          let confirmBtn = document.querySelector('.confirmBtn')
-          let cancelBtn = document.querySelector('.cancelBtn')
-          confirmBtn.addEventListener('click' ,function() {
-            icon.remove()
-            itemQuantity.remove()
-            
-          })
-
-        })
+        let payment = this.document.querySelector(".payment");
+        payment.addEventListener("click", function (event) {
+          event.preventDefault();
+          // update status in json file
+          for (let i of result) {
+            fetch(`http://localhost:3000/orders/${i.id}`, {
+              method: "PATCH",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({
+                order_status: "inplace",
+              }),
+            }).then((response) => {
+              response.json().then((data) => {
+                console.log(data);
+              });
+            });
+          }
+        });
       }
 
       // create price section
@@ -245,6 +258,38 @@ window.addEventListener("load", function () {
 
       let checkoutBtn = document.querySelector(".checkout-btn");
       cartContainer.insertBefore(summaryContainer, checkoutBtn);
+
+    
     });
   });
+    // link track page
+
+      let trackArrow = this.document.querySelector(".trackArrow");
+      console.log(trackArrow)
+      trackArrow.addEventListener("click", function () {
+        fetch("http://localhost:3000/orders").then((response) => {
+          response.json().then((data) => {
+            let customer = JSON.parse(
+              sessionStorage.getItem("loginCustomerUsername")
+            ).Username;
+            let result = [];
+            result = data.filter(
+              (item) =>
+                item.customer_user_name === customer &&
+                item.order_status.trim() != ""
+            );
+            if (result.length == 0) {
+              document.querySelector(".customAlert").style.display = "block";
+              document
+                .querySelector(".customAlert")
+                .addEventListener("click", function () {
+                  document.querySelector(".customAlert").style.display = "none";
+                });
+              
+            } else {
+              window.location.href = "../html/orderTrack.html";
+            }
+          });
+        });
+      });
 });

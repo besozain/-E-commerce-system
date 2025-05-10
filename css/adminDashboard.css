@@ -254,6 +254,12 @@ tbody tr:hover {
     color: rgb(0, 99, 49);
     border-color: rgb(0, 99, 49);
 }
+
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  accent-color: green;
+}
 /*************************************************************************************************************/
 
 .cartOverlay {

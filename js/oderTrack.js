@@ -5,11 +5,8 @@ window.addEventListener("load", function () {
         this.sessionStorage.getItem("loginCustomerUsername")
       ).Username;
       let result = [];
-      result = data.filter((item) => item.customer_user_name === customer);
-      if (result.length == 0) {
-        // empty.style.display = "block";// create div to tell there is nothing
-        return;
-      }
+      result = data.filter((item) => item.customer_user_name === customer && item.order_status.trim() != "");
+      
       // for every order create container
       for (let i of result) {
         //main container static
@@ -41,28 +38,28 @@ window.addEventListener("load", function () {
 
         let stepsData = [
           { num: "1", label: "Order Placed", class: "step" },
-          { num: "2", label: "Processing", class: "step active" },
+          { num: "2", label: "Processing", class: "step " },
           { num: "3", label: "Shipped", class: "step" },
           { num: "4", label: "Delivered", class: "step" },
         ];
          if(i.order_status == "inplace"){
             progress.style.width = "25%";
-            stepsData[0].class = "step completed"
+            stepsData[0].class = "step active"
         }else if (i.order_status == "processing"){
             progress.style.width = "50%";
             stepsData[0].class = "step completed"
-            stepsData[1].class = "step completed"
+            stepsData[1].class = "step active"
         }else if(i.order_status == "shipped") {
             progress.style.width = "75%";
             stepsData[0].class = "step completed"
             stepsData[1].class = "step completed"
-            stepsData[2].class = "step completed"
+            stepsData[2].class = "step active"
         }else if (i.order_status == "delivered"){
             progress.style.width = "100%";
             stepsData[0].class = "step completed"
             stepsData[1].class = "step completed"
             stepsData[2].class = "step completed"
-            stepsData[3].class = "step completed"
+            stepsData[3].class = "step active"
         }
 
 
