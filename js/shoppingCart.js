@@ -25,12 +25,6 @@ window.addEventListener("load", function () {
         // main container for each oeder
         let createdContanier = document.createElement("div");
         createdContanier.setAttribute("class", "cart-item");
-        //image
-        let img = document.createElement("img");
-        img.setAttribute("src", "");
-        img.setAttribute("alt", "Product");
-        img.setAttribute("class", "item-img");
-        createdContanier.appendChild(img);
         //item details
         let itemDetails = document.createElement("div");
         itemDetails.setAttribute("class", "item-details");
