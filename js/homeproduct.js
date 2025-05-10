@@ -1,15 +1,19 @@
 // let productgrid = document.getElementById("product-grid"); 
-
+let users=[]
 fetch("http://localhost:3000/products")
   .then((response) => response.json())
-  .then((users) => {
+  .then((data) => {
+    users=data.filter(ele=>ele.approve=="true")
     console.log(users);
-    // console.log(users)
+    if(users.length>7){
+      productshow(users,users.length)
+
+
+    }else{
+      productshow(users,users.length)
+
+    }
     
-    productshow(users,7)
-
-   
-
 
   });
 

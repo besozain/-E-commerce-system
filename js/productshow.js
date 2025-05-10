@@ -72,16 +72,7 @@ let parentElem = check.parentElement;
 
  if(check.classList.contains("add-to-cart")){
 
-  // console.log(check.textContent)
 
-
-  // if(check.textContent== "Add to Cart"){
-  //   console.log("good")
-  //   check.textContent="Added"
-  //   check.style.backgroundColor="#5ad8c5"
-  // }else{
-  //   console.log("bad")
-  // }
 
 
   if(sessionStorage.getItem("loginCustomerUsername")!=null){
@@ -213,7 +204,7 @@ let parentElem = check.parentElement;
 
  }
  else if(check.classList.contains("show")){
-  // window.location.href="../html/cart.html"
+ 
   console.log(children[4].textContent)
 
   fetch("http://localhost:3000/products")
@@ -221,6 +212,10 @@ let parentElem = check.parentElement;
   .then((user) => {
 
     const productmatch = user.find(u=>u.id ===children[4].textContent);
+
+    sessionStorage.setItem("product",JSON.stringify(productmatch))
+
+     window.location.href="../html/cart.html"
     console.log(productmatch)
 
   })
