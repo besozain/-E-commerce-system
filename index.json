@@ -1,26 +1,8 @@
 {
   "users": [
     {
-      "id": "8867",
-      "name": "beso",
-      "Email": "besozain@gmail.com",
-      "Username": "besozain",
-      "Password": "Moh&hag9501",
-      "Phone": "01020896307",
-      "role": "admin"
-    },
-    {
       "id": "81c1",
       "name": "hager",
-      "Email": "ha1316625@gmail.com",
-      "Username": "hager",
-      "Password": "Moh&hag9501",
-      "Phone": "01097077483",
-      "role": "admin"
-    },
-    {
-      "id": "aefc",
-      "name": "hager ahmed",
       "Email": "ha13166@gmail.com",
       "Username": "haywe",
       "Password": "Moh&hag9501",
@@ -29,20 +11,11 @@
     },
     {
       "id": "3108",
-      "name": "ameria",
-      "Email": "am1121@gmail.com",
-      "Username": "amerlia",
-      "Password": "Moh@hag9501",
-      "Phone": "01026619459",
-      "role": "customer"
-    },
-    {
-      "id": "3108",
-      "name": "ameria",
-      "Email": "am11251@gmail.com",
-      "Username": "aammeria",
-      "Password": "Moh@hag9501",
-      "Phone": "01026619459",
+      "name": "hager",
+      "Email": "ha13166@gmail.com",
+      "Username": "haywe",
+      "Password": "Moh&hag9501",
+      "Phone": "01094452071",
       "role": "customer"
     },
     {
@@ -65,16 +38,15 @@
     },
     {
       "id": "1660",
-      "name": "beso",
-      "Email": "basmazain102000@gmail.com",
-      "Username": "basmazain",
-      "Password": "Kayonaa2000@",
-      "Phone": "01020896307",
-      "role": "seller"
+      "name": "hager",
+      "Email": "ha13166@gmail.com",
+      "Username": "haywe",
+      "Password": "Moh&hag9501",
+      "Phone": "01094452071",
+      "role": "customer"
     }
   ],
   "products": [
-   
     {
       "id": "18",
       "name": "Canon EOS R5",
@@ -98,7 +70,6 @@
       "imageUrl": "https://example.com/breville.jpg",
       "sellerUsername": "basmazain",
       "approve": "false"
-
     },
     {
       "id": "20",

@@ -66,7 +66,7 @@
         </div>
 
         <div class="table-container">
-          <table>
+          <table id="targetTable">
             <thead>
               <tr>
                 <th>Name</th>
@@ -95,35 +95,26 @@
       </header>
 
       <section class="register">
-        <!-- <h1>Sign up</h1> -->
-        <!-- <form action=""> -->
-            <!-- <label for="name"> name </label> -->
-            <!-- <br> -->
+      
             <input  type="text" name="name" id="name" class="register" placeholder="Enter the name">
             <div id="errorname">user name should be more than three characters</div>
     
-            <!-- <label for="email"> email </label> -->
-            <!-- <br> -->
+          
             <input type="email" name="email" id="email" class="register" placeholder="Enter the email">
             <div id="erroremail">invalid email</div>
     
-            <!-- <label for="username"> username </label> -->
-            <!-- <br> -->
+          
             <input type="text" name="username" id="username" class="register" placeholder="Enter the username">
             <div id="errorusername">user name should be more than three characters</div>
     
-            <!-- <label for="password"> password </label> -->
-            <!-- <br> -->
+           
             <input type="password" name="password" id="password" class="register" placeholder="Enter the password">
             <div id="errorpassword">weak password have to include upper and lower case and special chacacter</div>
     
-            <!-- <label for="confirm"> confirm </label> -->
-            <!-- <br> -->
             <input type="password" name="confirm" id="confirm" class="register" placeholder="Enter the confirm">
             <div id="errorconfirm">password does not match</div>
     
-            <!-- <label for="phone"> phone </label> -->
-            <!-- <br> -->
+        
             <input type="tel" name="phone" id="phone" class="register" placeholder="Enter the phone">
             <div id="errorphone">invalid number</div>
 
@@ -160,11 +151,66 @@
     <!-- </header> -->
     
     <footer>
-      <button id="productdelete" class="addproduct">delete</button>
-      <button id="cencelproductdelete" class="cencelproduct">Cancel</button>           <!---edit it-->>
-    </footer>
+      <button id="userdelete" class="addproduct">delete</button>
+      <button id="cenceluser" class="cencelproduct">Cancel</button>           
 
   </div>
+  <!-- --------------------------------------------------------------------------------------------------- -->
+  
+<div id="updatecartOverlay" class="cartOverlay"></div>
+    <div id="updatecartModal" class="cartModal">
+      <header id="updateuserheader" class="header">
+        <h2>Edit User</h2>
+        <button id="updateclose" class="headerclose"><i class="fa-solid fa-xmark"></i></button>
+      </header>
+
+      <section class="register">
+      
+            <input  type="text" name="name" id="updatename" class="register" placeholder="Enter the name">
+            <div id="updateerrorname">user name should be more than three characters</div>
+    
+          
+            <input type="email" name="email" id="updateemail" class="register" placeholder="Enter the email">
+            <div id="updateerroremail">invalid email</div>
+    
+          
+            <input type="text" name="username" id="updateusername" class="register" placeholder="Enter the username">
+            <div id="updateerrorusername">user name should be more than three characters</div>
+    
+           
+            <input type="password" name="password" id="updatepassword" class="register" placeholder="Enter the password">
+            <div id="updateerrorpassword">weak password have to include upper and lower case and special chacacter</div>
+    
+            <input type="password" name="confirm" id="updateconfirm" class="register" placeholder="Enter the confirm">
+            <div id="updateerrorconfirm">password does not match</div>
+    
+        
+            <input type="tel" name="phone" id="updatephone" class="register" placeholder="Enter the phone">
+            <div id="updateerrorphone">invalid number</div>
+
+            <select name="role" id="updaterole">
+                <option value="customer">customer</option>
+                <option value="seller">seller</option>
+                <option value="admin">admin</option>
+            </select>
+            <br>
+            <br>
+            <br>
+    
+            <!-- <button type="submit" id="submit">register</button> -->
+        <!-- </form> -->
+    </section>
+
+
+      <footer>
+        <button id="updateuser" class="addproduct">Edit</button>
+        <button id="cencel" class="cencelproduct">Cancel</button>
+      </footer>
+      <!-- <span id="submit"></span>
+      <span id="signIn"></span> -->
+    </div>
+
+
 
 
 
